@@ -1,7 +1,7 @@
-<div data-role="page" id="task">
+<div data-role="page" id="task" data-theme="d">
 
     <header data-role="header" class="bar-title">
-        <a class="button-prev" href="Home.php">Tilbake</a>
+        <a data-rel="back">Back</a>
         <h1 class="title">Kreativitet</h1>
     </header>
 
@@ -46,12 +46,12 @@
                   <input type="email" placeholder="male et bilde">
                 </div>
             </div>
-            <a class="button-block button-positive">Ok, gå videre!</a>
+            <a data-role="button">Ok, gå videre!</a>
         </form>
         <h2>2. Visste du at...</h2>
         <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
 
-        <a class="button-block button-positive">Ok, gå videre!</a>
+        <a data-role="button">Ok, gå videre!</a>
 
         <h2>3. Ta det første steget!</h2>
         <form>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <a class="button-block button-positive">Fullfør!</a>
+            <a data-role="button">Fullfør!</a>
         </form>
     </div>
 </div>
