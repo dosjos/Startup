@@ -1,5 +1,5 @@
 <header class="bar-title">
-    <a class="button-prev" href="#">Tilbake</a>
+    <a class="button-prev" href="HowTo.php">Ok!</a>
     <h1 class="title">Slik fungerer det</h1>
 </header>
 

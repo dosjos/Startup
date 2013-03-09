@@ -1,5 +1,5 @@
 <header class="bar-title">
-    <a class="button-prev" href="#">Tilbake</a>
+    <a class="button-prev" href="Home.php">Tilbake</a>
     <h1 class="title">Kreativitet</h1>
 </header>
 
@@ -7,11 +7,36 @@
     <p>Hvordan styrker du din kreativitet?</p>
     <h2>1. Sett mål!</h2>
     <form>
-      <div class="input-group">
-        <input type="text" placeholder="Tegne et bilde">
-        <input type="text" placeholder="Ommøblere et rom">
-        <input type="text" placeholder="Lære 3 akkorder på piano">
-      </div>
+        <div class="input-group">
+            <div class="input-row">
+                <label>Når jeg...</label>
+                <input type="text" placeholder="har spist middag">
+            </div>
+            <div class="input-row">
+              <label>..skal jeg..</label>
+              <input type="email" placeholder="male et bilde">
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-row">
+                <label>Når jeg...</label>
+                <input type="text" placeholder="har spist middag">
+            </div>
+            <div class="input-row">
+              <label>..skal jeg..</label>
+              <input type="email" placeholder="male et bilde">
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-row">
+                <label>Når jeg...</label>
+                <input type="text" placeholder="har spist middag">
+            </div>
+            <div class="input-row">
+              <label>..skal jeg..</label>
+              <input type="email" placeholder="male et bilde">
+            </div>
+        </div>
     </form>
     <h2>2. Visste du at...</h2>
     <h2>3. Ta det første steget!</h2>
