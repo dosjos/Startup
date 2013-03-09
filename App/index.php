@@ -1,16 +1,32 @@
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
 
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+    <!-- Set Apple icons for when prototype is saved to home screen -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="touch-icons/apple-touch-icon-57x57.png">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link rel="stylesheet" href="ratchet/ratchet.css">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="ratchet/ratchet.js"></script>
 
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
     <script src="js/less.js" type="text/javascript"></script>
 
-    <script src="ratchet/ratchet.js" type="text/javascript"></script>
-
-</head>
+  </head>
+  <body>
 <body>
 <header class="bar-title">
     <h1 class="title">Push</h1>
@@ -27,7 +43,8 @@
             <span class="chevron"></span>
         </li>
     </ul>
-</div>
+    fdgsdfgdsfhsdfhdf
 
+</div>
 </body>
 </html>
