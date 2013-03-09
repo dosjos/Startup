@@ -17,9 +17,9 @@ if(isset($_GET['type'])){
         $result = $mysqli->query($query);
         echo "{";
         while ($row = $result->fetch_array(MYSQLI_NUM)) {
-            echo "egenskap:{\n";
-            echo "id: ". $row[0] .",\n";
-            echo "text: ". $row[1]."\n";
+            echo '"egenskap":{\n';
+            echo '"id": '. $row[0] .",\n";
+            echo '"text": '. $row[1]."\n";
             echo "}\n";
         }
 
