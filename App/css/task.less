@@ -1,11 +1,23 @@
 .content.task {
 	padding:15px;
-
+	.cover-image {
+	    margin:0 -15px 0 -15px;
+	    img {
+			width:100%;
+			height:auto;
+		}
+	}
 	.lead {
 		font-size:16px;
 		font-weight: 500;
 		color:#444;
 		margin-bottom: 30px;
+
+		h2 {
+			font-size:1.2em;
+			border:none;
+		}
+
 		.proceed {
 			margin:30px 0;
 			text-align: center;
@@ -25,5 +37,18 @@
 		border-bottom: 1px solid #eee;
 		margin-bottom:15px;
 		padding-bottom:6px;
+	}
+	.progress {
+	    border-top:1px solid @brand-blue-light;
+		background: lighten(@brand-blue-light, 15%);
+		margin:20px -15px 0 -15px;
+		padding:1px 15px 15px 15px;
+		h2 {
+		    border:0;
+			color:@brand-blue-dark;
+			width:80%;
+			text-align: center;
+			margin:20px auto 0 auto;
+		}
 	}
 }
