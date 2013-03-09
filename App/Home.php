@@ -28,36 +28,13 @@
             </ul>
         </div>
 
-
-        <div data-role="popup" id="select">
-            <div data-role="fieldcontain">
-                <fieldset data-role="controlgroup">
-                    <legend>Date of Birth:</legend>
-
-                    <label for="select-choice-month">Month</label>
-                    <select name="select-choice-month" id="select-choice-month">
-                        <option>Month</option>
-                        <option value="jan">January</option>
-                        <!-- etc. -->
-                    </select>
-
-                    <label for="select-choice-day">Day</label>
-                    <select name="select-choice-day" id="select-choice-day">
-                        <option>Day</option>
-                        <option value="1">1</option>
-                        <!-- etc. -->
-                    </select>
-
-                    <label for="select-choice-year">Year</label>
-                    <select name="select-choice-year" id="select-choice-year">
-                        <option>Year</option>
-                        <option value="2011">2011</option>
-                        <!-- etc. -->
-                    </select>
-
-                </fieldset>
-            </div>
-        </div>
+		
+		<div data-role="popup" id="select">
+		        <ul data-role="listview">
+		            <li data-role="divider" data-theme="e">Velg en egenskap:</li>
+		            <li><a href="#">Delete</a></li>
+		        </ul>
+		</div>
 
         <div class="intro" style="display:none;">
             <h2>Slik begynner du!</h2>

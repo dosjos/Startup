@@ -79,6 +79,29 @@
 
           }
 
+
+$(document).ready(function() {
+	
+	/* GetEgenskaper.php */
+	function getEgenskaper() {
+		
+		$.getJSON("getEgenskaper.php?type=egenskaper", function(json) {
+		var items = [];
+		   $.each(json, function(key,val) {
+			   
+		   });
+		   console.log("JSON Data: " + json.id[3].name);
+		   
+		   /*
+id
+		   text
+*/
+		   
+		 });
+
+});
+
+
       </script>
 
 
