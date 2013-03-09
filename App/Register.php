@@ -8,14 +8,18 @@
         <div class="input-group">
             <div class="input-row">
                 <label>Fornavn</label>
-                <input type="text" placeholder="Mister Ratchet">
+                <input type="text" placeholder="Ditt fornavn">
             </div>
             <div class="input-row">
               <label>Epost</label>
               <input type="email" placeholder="din@epost.no">
             </div>
         </div>
-        <a class="button-block">Registrer deg!</a>
+        <a class="button-block button-positive">Registrer deg!</a>
     </form>
+    <ul class="footer-navigation">
+        <li><a href="HowTo.php">Lær mer</a></li>
+        <li><a href="#">Betingelser</a></li>
+    </ul>
 </div>
 

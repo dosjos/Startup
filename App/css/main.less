@@ -1,6 +1,7 @@
 @import "font-awesome.less";
 @import "mixins.less";
-
+@import "home.less";
+@import "howto.less";
 
 @brand-blue: #2a9ce6;
 @brand-blue-light: #83c8f3;
@@ -12,87 +13,58 @@
 body {
 }
 
+h2 + p {
+	margin-top:0.8em;
+}
+@-webkit-keyframes fadeSilhouette {
+    0% {
+        background-position: center -15px;
+    }
+    100% {
+        background-position: center 0px;
+    }
+}
+
+@-webkit-keyframes fadeForm {
+    0% {
+        margin-top:-15px;
+        opacity: 0;
+    }
+    100% {
+        margin-top:0px;
+        opacity: 1;
+    }
+}
+
 .content {
 	&.register {
 		background: @brand-blue-dark;
 		background-image: url('../images/silhouette-empty-dark.png');
 		background-size: 330px 770px;
-		background-position: top center;
 		background-repeat: no-repeat;
+
+		-webkit-animation-name: fadeSilhouette;
+		-webkit-animation-iteration-count: once;
+		-webkit-animation-timing-function: ease-in-out;
+		-webkit-animation-duration: 1s;
+
+        background-position: center 0px;
+
 		.welcome {
 			color: #fff;
-			width:70%;
+			width:80%;
 			margin:60px auto 30px auto;
 			text-align: center;
+			.text-shadow(0, -1px, 0, black);
 		}
 		form {
 			width:70%;
 			margin:0 auto;
-		}
-	}
-	&.home {
-	    .intro {
-			background: rgba(0,0,0,0.8);
-			position: absolute;
-			width:80%;
-			margin-left:-45%;
-			padding:20px 5%;
-			top:30px;
-			left:50%;
-			.border-radius(10px);
-			.box-shadow(3px, 3px, 15px, rgba(0,0,0,0.2));
-			color: #fff;
 
-			.button-block { margin-top:20px; }
-			}
-	    .silhouette {
-	        width:150px;
-	        height:350px;
-	        margin:20px auto;
-			background-image: url('../images/silhouette-empty.png');
-			background-size: 150px 350px;
-			background-position: top center;
-			background-repeat: no-repeat;
-
-			position:relative;
-
-			ul.properties {
-			    padding:0;
-				margin:0;
-				list-style:none;
-
-				li {
-				    position:absolute;
-					font-weight:bold;
-					font-size:14px;
-					color:@medium-gray;
-
-					&.head {
-						top:10px;
-						right:-40px;
-					}
-					&.left-arm {
-						top:80px;
-						left:-60px;
-					}
-					&.right-arm {
-						top:120px;
-						right:-60px;
-					}
-					&.torso {
-						top:180px;
-						right:160px;
-					}
-					&.left-leg {
-						bottom:40px;
-						left:-60px;
-					}
-					&.right-leg {
-						bottom:40px;
-						right:-60px;
-					}
-				}
-			}
+			-webkit-animation-name: fadeForm;
+			-webkit-animation-iteration-count: once;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-duration: 1s;
 		}
 	}
 }
