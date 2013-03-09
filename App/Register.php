@@ -1,8 +1,14 @@
-<?php
-/**
- * Created by JetBrains PhpStorm.
- * User: skottjan
- * Date: 09.03.13
- * Time: 13:00
- * To change this template use File | Settings | File Templates.
- */
+<html>
+
+
+<body>
+
+<header class="bar-title">
+    <h1 class="title">Title</h1>
+</header>
+
+
+
+</body>
+
+</html>
