@@ -5,6 +5,7 @@
     <script src="js/less.js" type="text/javascript"></script>
 </head>
 <body>
+<i class="icon-ok"></i>
 <?php
     echo "<div class='MainWrapper'>";
 
