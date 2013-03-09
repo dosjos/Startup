@@ -13,4 +13,9 @@
             <li class="right-leg">Property</li>
         </ul>
     </div>
+    <div class="intro">
+        <h2>Slik begynner du!</h2>
+        <p>Fyll figuren med 6 egenskaper du ønsker å utvikle.</p>
+        <a class="button-block button-main">Begynn!</a>
+    </div>
 </div>
