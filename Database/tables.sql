@@ -35,7 +35,7 @@ create table Startup_UsersEgenskaper(
 );
 
 
-insert into startup_users (email, pass, name) values('j.skotterud@gmail.com','knut','Jan Ole')
+insert into Startup_Users (email, pass, name) values('j.skotterud@gmail.com','knut','Jan Ole');
 
 insert into Starup_Egenskaper(egenskap) values('Kreativitet');
 insert into Starup_Egenskaper(egenskap) values('Humoristisk sans');
