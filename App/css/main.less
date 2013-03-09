@@ -2,6 +2,7 @@
 @import "mixins.less";
 @import "home.less";
 @import "howto.less";
+@import "forms.less";
 @import "task.less";
 
 @brand-blue: #2a9ce6;
@@ -16,9 +17,16 @@
 body {
 }
 
+h1,h2,h3 { color: #444; }
+p {
+	line-height: 1.5;
+	margin-bottom:0.8em;
+}
+
 h2 + p {
 	margin-top:0.8em;
 }
+
 @-webkit-keyframes fadeSilhouette {
     0% {
         background-position: center -15px;
@@ -53,8 +61,8 @@ h2 + p {
 		-webkit-animation-duration: 1s;
 
         background-position: center 0px;
-
 		.welcome {
+			h1 { color: #fff; }
 			color: #fff;
 			width:80%;
 			margin:60px auto 30px auto;
