@@ -15,16 +15,15 @@ $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 $query = "SELECT * FROM starup_egenskaper";
 
 $result = $mysqli->query($query);
-print_r($result);
-$row = $result->fetch_array(MYSQLI_NUM);
-print_r($row);
-echo "{";
-foreach( $result->fetch_array(MYSQLI_NUM) as $r){
 
+
+
+echo "{";
+while ($row = $result->fetch_array(MYSQLI_NUM)) {
     echo "egenskap:{\n";
-        echo "id: ". $r[0] ."\n";
-        echo "text: ". $r[1]."\n";
-      echo "}\n";
+    echo "id: ". $row[0] ."\n";
+    echo "text: ". $row[1]."\n";
+    echo "}\n";
 }
 
 echo "}";
