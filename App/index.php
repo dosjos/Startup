@@ -28,6 +28,31 @@
       <script src="js/push.js" type="text/javascript"></script>
       <script src="js/sliders.js" type="text/javascript"></script>
       <script src="js/fingerblast.js" type="text/javascript"></script>
+      <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+
+
+
+      <script type="text/javascript">
+
+          function test(name, pass){
+              alert(name);
+              var ajaxRequest = new XMLHttpRequest();
+
+              ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+
+                      alert(ajaxRequest.responseText);
+                  }
+              }
+
+              var queryString = "http://localhost/startup/App/checkuserlogin.php?user=" + name + "&pass=" + pass;
+              ajaxRequest.open("GET", queryString, true);
+              ajaxRequest.send(null);
+
+          }
+
+      </script>
+
 
   </head>
   <body>

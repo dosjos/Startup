@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+</head>
+<body>
 <?php
     if(isset($_POST['epost']) && isset($_POST['pass'])){
 
@@ -18,29 +23,30 @@
     </header>
 
     <div class="content">
-        <form  name="input" action="Login.php" method="post">
+        <form  name="input" action="" method="get">
             <div class="input-group">
                 <div class="input-row">
                     <label>Epost</label>
-                    <input type="email" placeholder="Mister Ratchet">
+                    <input type="email" placeholder="din@epost.no" name="username">
                 </div>
                 <div class="input-row">
                     <label>Passord</label>
-                    <input type="password" placeholder="din@epost.no">
+                    <input type="password" placeholder="passord" name="pass">
                 </div>
             </div>
-            <a class="button-block">Registrer deg!</a>
-            <input type="button" class="button button-block" href="Login.php">Login</a>
+            <div class="button-block" onclick="test(input.username, input.pass)" data-ignore="push">Registrer deg!</div>
+
         </form>
 
-<script>
-    
-
-</script>
 
 
 
     </div>
+
 <?php
     }
 ?>
+
+</body>
+</html>
+

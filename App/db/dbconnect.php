@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = '';
-$dbpass = '';
+$dbuser = 'janole';
+$dbpass = 'passord';
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Kunne ikke kontakte databasen, prøv igjen senere');
 
