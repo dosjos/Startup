@@ -4,6 +4,17 @@
 
 <div class="content home">
     <div class="silhouette">
+    
+	    <div class="humansprite">
+	        <div class="head"></div>
+	        <div class="left-arm"></div>
+	        <div class="right-arm"></div>
+	        <div class="torso"></div>
+	        <div class="left-leg"></div>
+	        <div class="right-leg"></div>
+	    </div>
+
+
         <ul class="properties">
             <li class="head">Property</li>
             <li class="left-arm">Property</li>
