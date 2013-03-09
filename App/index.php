@@ -30,7 +30,6 @@
 
 
       <script type="text/javascript">
-
           function test(name, pass){
               //alert(name);
               //alert(pass);
@@ -41,6 +40,7 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+
                           window.location = "index.php#home";
                       }
                   }
