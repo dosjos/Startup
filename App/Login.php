@@ -18,13 +18,28 @@
     </header>
 
     <div class="content">
-        <form name="input" action="Login.php" method="post">
+        <form  name="input" action="Login.php" method="post">
             <div class="input-group">
-                <input type="email" placeholder="Email" name="epost">
-                <input type="password" placeholder="Password" name="pass">
-                <a class="button button-block" href="Login.php">Login</a>
+                <div class="input-row">
+                    <label>Epost</label>
+                    <input type="email" placeholder="Mister Ratchet">
+                </div>
+                <div class="input-row">
+                    <label>Passord</label>
+                    <input type="password" placeholder="din@epost.no">
+                </div>
             </div>
+            <a class="button-block">Registrer deg!</a>
+            <input type="button" class="button button-block" href="Login.php">Login</a>
         </form>
+
+<script>
+    
+
+</script>
+
+
+
     </div>
 <?php
     }

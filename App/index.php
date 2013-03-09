@@ -24,6 +24,10 @@
 
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
     <script src="js/less.js" type="text/javascript"></script>
+      <script src="js/popovers.js" type="text/javascript"></script>
+      <script src="js/push.js" type="text/javascript"></script>
+      <script src="js/sliders.js" type="text/javascript"></script>
+      <script src="js/fingerblast.js" type="text/javascript"></script>
 
   </head>
   <body>
