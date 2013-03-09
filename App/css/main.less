@@ -4,6 +4,7 @@
 @import "howto.less";
 @import "forms.less";
 @import "task.less";
+@import "register.less";
 
 @brand-blue: #2a9ce6;
 @brand-blue-light: #83c8f3;
@@ -50,40 +51,11 @@ body {
 		margin-top:0.8em;
 	}
 
-	&.register {
-		background: @brand-blue-dark;
-		background-image: url('../images/silhouette-empty-dark.png');
-		background-size: 330px 770px;
-		background-repeat: no-repeat;
-
-		-webkit-animation-name: fadeSilhouette;
-		-webkit-animation-iteration-count: once;
-		-webkit-animation-timing-function: ease-in-out;
-		-webkit-animation-duration: 1s;
-
-        background-position: center 0px;
-		.welcome {
-			h1 { color: #fff; }
-			color: #fff;
-			width:80%;
-			margin:60px auto 30px auto;
-			text-align: center;
-			.text-shadow(0, -1px, 0, black);
-		}
-		form {
-			width:70%;
-			margin:0 auto;
-
-			-webkit-animation-name: fadeForm;
-			-webkit-animation-iteration-count: once;
-			-webkit-animation-timing-function: ease;
-			-webkit-animation-duration: 1s;
-		}
-	}
 	.footer-navigation {
 	    padding-top:20px;
 		list-style: none;
 		text-align: center;
+		text-shadow:none;
 		li {
 			display: inline-block;
 			padding:5px 15px;
