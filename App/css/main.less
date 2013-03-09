@@ -2,20 +2,31 @@
 @import "mixins.less";
 @import "home.less";
 @import "howto.less";
+@import "forms.less";
+@import "task.less";
 
 @brand-blue: #2a9ce6;
 @brand-blue-light: #83c8f3;
 @brand-blue-dark: #002c48;
 @brand-orange: #fe9c00;
 
+
+@light-gray: #ccc;
 @medium-gray: #777;
 
 body {
 }
 
+h1,h2,h3 { color: #444; }
+p {
+	line-height: 1.5;
+	margin-bottom:0.8em;
+}
+
 h2 + p {
 	margin-top:0.8em;
 }
+
 @-webkit-keyframes fadeSilhouette {
     0% {
         background-position: center -15px;
@@ -37,6 +48,7 @@ h2 + p {
 }
 
 .content {
+
 	&.register {
 		background: @brand-blue-dark;
 		background-image: url('../images/silhouette-empty-dark.png');
@@ -49,8 +61,8 @@ h2 + p {
 		-webkit-animation-duration: 1s;
 
         background-position: center 0px;
-
 		.welcome {
+			h1 { color: #fff; }
 			color: #fff;
 			width:80%;
 			margin:60px auto 30px auto;
@@ -65,6 +77,19 @@ h2 + p {
 			-webkit-animation-iteration-count: once;
 			-webkit-animation-timing-function: ease;
 			-webkit-animation-duration: 1s;
+		}
+	}
+	.footer-navigation {
+	    padding-top:20px;
+		list-style: none;
+		text-align: center;
+		li {
+			display: inline-block;
+			padding:5px 15px;
+			border-right:1px solid #ccc;
+			&:last-of-type {
+				border-right: 0;
+			}
 		}
 	}
 }

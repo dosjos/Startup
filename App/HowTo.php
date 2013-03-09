@@ -1,8 +1,6 @@
 <header class="bar-title">
-    <a class="button-prev" href="#">
-      Tilbake
-    </a>
-    <h1 class="title">Hvordan fungerer det?</h1>
+    <a class="button-prev" href="HowTo.php">Ok!</a>
+    <h1 class="title">Slik fungerer det</h1>
 </header>
 
 <div class="content howto">
