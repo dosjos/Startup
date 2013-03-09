@@ -1,0 +1,99 @@
+.content.home {
+	.intro {
+		background: rgba(0,0,0,0.9);
+		position: absolute;
+		width:80%;
+		margin-left:-45%;
+		padding:15px 5%;
+		top:30px;
+		left:50%;
+		.border-radius(10px);
+		.box-shadow(3px, 3px, 15px, rgba(0,0,0,0.3));
+
+		color: #fff;
+		text-align:center;
+		.button-block { margin-top:20px; }
+
+	}
+	.silhouette {
+		width:150px;
+		height:350px;
+		margin:20px auto;
+		background-image: url('../images/silhouette-empty.png');
+		background-size: 150px 350px;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		position:relative;
+
+		ul.properties {
+			padding:0;
+			margin:0;
+			list-style:none;
+
+			li {
+				position:absolute;
+				font-weight:bold;
+				font-size:14px;
+				color:@medium-gray;
+
+				&:after {
+					content:" ";
+					height:1px;
+					background: @medium-gray;
+					position: absolute;
+					bottom:-5px;
+				}
+
+				&.head {
+					top:10px;
+					right:-40px;
+					&:after {
+						width:110px;
+						right:0;
+					}
+				}
+				&.left-arm {
+					top:60px;
+					left:-60px;
+					&:after {
+						width:100px;
+						left:0;
+					}
+				}
+				&.right-arm {
+					top:80px;
+					right:-60px;
+					&:after {
+						width:90px;
+						right:0;
+					}
+				}
+				&.torso {
+					top:140px;
+					right:160px;
+					&:after {
+						width:140px;
+						left:0;
+					}
+				}
+				&.left-leg {
+					bottom:70px;
+					left:-60px;
+					&:after {
+						width:100px;
+						left:0;
+					}
+				}
+				&.right-leg {
+					bottom:90px;
+					right:-60px;
+					&:after {
+						width:100px;
+						right:0;
+					}
+				}
+			}
+		}
+	}
+}
