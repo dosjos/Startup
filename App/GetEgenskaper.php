@@ -25,14 +25,14 @@ if(isset($_GET['type'])){
         }
         echo "{";
         while ($row = $result->fetch_array(MYSQLI_NUM)) {
-            echo '"egenskap":[{';
+            echo '"egenskap'.$antall.'":{';
             echo '"id": '. $row[0] .",\n";
             echo '"text": "'. $row[1].'"' . "\n";
             $antall--;
             if($antall == 0){
-                echo "}]\n";
+                echo "}\n";
             }else{
-                echo "}],\n";
+                echo "},\n";
             }
         }
 
