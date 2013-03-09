@@ -32,17 +32,21 @@
       <script type="text/javascript">
 
           function test(name, pass){
-              alert(name);
+              //alert(name);
+              //alert(pass);
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){
                   if(ajaxRequest.readyState == 4){
+                      eval("var response = ("+ajaxRequest.responseText+")");
 
-                      alert(ajaxRequest.responseText);
+                      if(response.item1 == true){
+                          window.location = "index.php#home";
+                      }
                   }
               }
 
-              var queryString = "http://localhost/startup/App/checkuserlogin.php?user=" + name + "&pass=" + pass;
+              var queryString = "checkuserlogin.php?name=" + name + "&pass=" + pass;
               ajaxRequest.open("GET", queryString, true);
               ajaxRequest.send(null);
 
