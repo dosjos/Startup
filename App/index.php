@@ -50,6 +50,10 @@
             <a href="Home.php" data-transition="slide-in">Home</a>
             <span class="chevron"></span>
         </li>
+        <li>
+            <a href="HowTo.php" data-transition="slide-in">Howto</a>
+            <span class="chevron"></span>
+        </li>
     </ul>
 </div>
 </body>
