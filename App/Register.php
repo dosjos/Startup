@@ -1,21 +1,21 @@
-<header class="bar-title">
-    <h1 class="title">Title</h1>
-</header>
-<<<<<<< HEAD
-<div class="content">
+
+<div class="content register">
+    <div class="welcome">
+        <h1>Bli ditt beste!</h1>
+        <p>Denne tjenesten hjelper deg til å utvikle de egenskapene du ønsker å forbedre.</p>
+    </div>
     <form>
         <div class="input-group">
-            <input type="text" placeholder="Navn">
-            <input type="email" placeholder="E-post">
+            <div class="input-row">
+                <label>Fornavn</label>
+                <input type="text" placeholder="Mister Ratchet">
+            </div>
+            <div class="input-row">
+              <label>Epost</label>
+              <input type="email" placeholder="din@epost.no">
+            </div>
         </div>
+        <a class="button-block">Registrer deg!</a>
     </form>
 </div>
 
-
-</body>
-
-</html>
-=======
-
-<div class="content">sdfhds</div>
->>>>>>> fb3b8f82b053517014cd1fb588abce11bdbb4c2c

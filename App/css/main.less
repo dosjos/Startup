@@ -11,17 +11,22 @@
 body {
 }
 
-.content {}
-
-.register {
-	background: @brand-blue-dark;
-	color: #fff;
-}
-
-.silhouette {
-	background-image: url('../images/silhouette-empty-dark.png');
-	background-size: 330px 770px;
-	display: block;
-	height:770px;
-	width:330px;
+.content {
+	&.register {
+		background: @brand-blue-dark;
+		background-image: url('../images/silhouette-empty-dark.png');
+		background-size: 330px 770px;
+		background-position: top center;
+		background-repeat: no-repeat;
+		.welcome {
+			color: #fff;
+			width:70%;
+			margin:60px auto 30px auto;
+			text-align: center;
+		}
+		form {
+			width:70%;
+			margin:0 auto;
+		}
+	}
 }
