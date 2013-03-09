@@ -42,9 +42,11 @@
             <a href="Register.php" data-transition="slide-in">Register</a>
             <span class="chevron"></span>
         </li>
+        <li>
+            <a href="Home.php" data-transition="slide-in">Home</a>
+            <span class="chevron"></span>
+        </li>
     </ul>
-    fdgsdfgdsfhsdfhdf
-
 </div>
 </body>
 </html>
