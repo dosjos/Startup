@@ -1,21 +1,23 @@
 
 
 
-create table Startup_Users {
+create table Startup_Users (
 	id int,
 	email varchar(200),
 	name varchar(200),
-	primary key(userid)
-}
+	primary key(id)
+);
+
 
 create table Starup_Egenskaper
-{
+(
 	id int,
 	egenskap varchar(200),
 	primary key(id)
-}
+);
 
-create table Startup_UsersEgenskaper{
+
+create table Startup_UsersEgenskaper(
 	id int,
 	userid int not null,
 	egenskapOne int,
@@ -28,4 +30,4 @@ create table Startup_UsersEgenskaper{
 	
 	FOREIGN KEY (userid) REFERENCES Startup_Users(id),
 	primary key(id)
-}
+);
