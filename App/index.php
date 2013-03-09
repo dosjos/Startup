@@ -54,6 +54,10 @@
             <a href="HowTo.php" data-transition="slide-in">Howto</a>
             <span class="chevron"></span>
         </li>
+        <li>
+            <a href="Task.php" data-transition="slide-in">Task</a>
+            <span class="chevron"></span>
+        </li>
     </ul>
 </div>
 </body>

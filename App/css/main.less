@@ -2,6 +2,7 @@
 @import "mixins.less";
 @import "home.less";
 @import "howto.less";
+@import "task.less";
 
 @brand-blue: #2a9ce6;
 @brand-blue-light: #83c8f3;
@@ -37,6 +38,7 @@ h2 + p {
 }
 
 .content {
+
 	&.register {
 		background: @brand-blue-dark;
 		background-image: url('../images/silhouette-empty-dark.png');
@@ -65,6 +67,19 @@ h2 + p {
 			-webkit-animation-iteration-count: once;
 			-webkit-animation-timing-function: ease;
 			-webkit-animation-duration: 1s;
+		}
+	}
+	.footer-navigation {
+	    padding-top:20px;
+		list-style: none;
+		text-align: center;
+		li {
+			display: inline-block;
+			padding:5px 15px;
+			border-right:1px solid #ccc;
+			&:last-of-type {
+				border-right: 0;
+			}
 		}
 	}
 }
