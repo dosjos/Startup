@@ -15,22 +15,21 @@
 		.button-block { margin-top:20px; }
 
 	}
+	
 	.silhouette {
 		width:150px;
 		height:350px;
 		margin:20px auto;
-/*		background-image: url('../images/silhouette-empty.png'); */
+		background-image: url('../images/silhouette-empty.png');
 		background-size: 150px 350px;
 		background-position: top center;
 		background-repeat: no-repeat;
 
 		position:relative;
 
-		
+
 		.humansprite {
-			background: green;
-			min-height: 100px;
-			min-width: 100px;
+		
 			
 			position: relative;
 			
@@ -38,50 +37,47 @@
 				position: absolute;
 				display: block;
 				background-image: url('../images/humansprite.png');
-				
+				background-size: 500px 376px;
 				
 				&.head {
-					width: 120px;
-					height: 115px;
+					width: (120px)/2;
+					height: (115px)/2;
 					background-position: 0 0;
-					top: 0px;
-					left: 50px;
+					top: (0px)/2;
+					left: (113px)/2;
 				}
 				&.left-arm {
 				/*58
 				280*/
-					width: 331px;
-					height: 259px;
-					top:80px;
-					left:-60px;
+					width: (331px)/2;
+					height: (259px)/2;
+					top: (116px)/2;
+					left: (25px)/2;
 				}
 				&.right-arm {
-					width: 331px;
-					height: 259px;
-					top:120px;
-					right:-60px;
+					width: (331px)/2;
+					height: (259px)/2;
+					top:116px;
+					left:215px;
 				}
 				&.torso {
-					width: 138px;
-					height: 259px;
-					top:180px;
-					right:160px;
+					width: (138px)/2;
+					height: (259px)/2;
+					top:124px;
+					right:65px;
 				}
 				&.left-leg {
-					left: 331px;
-					top: 259px;
-					width: 101px;
-					height: 313px;
-					
-					bottom:40px;
-					left:-60px;
+					width: (101px)/2;
+					height: (313px)/2;
+					left: (331px)/2;
+					top: (377px)/2;
+					left:(48px)/2;
 				}
 				&.right-leg {
-					left: 
-					width: 331px;
-					height: 259px;
-					bottom:40px;
-					right:-60px;
+					width: (331px)/2;
+					height: (259px)/2;
+					top: (259px)/2;
+					left: (153px)/2;
 				}
 			}
 			
