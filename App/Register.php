@@ -18,3 +18,4 @@
         <a class="button-block">Registrer deg!</a>
     </form>
 </div>
+

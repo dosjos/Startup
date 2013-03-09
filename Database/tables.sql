@@ -5,7 +5,9 @@ create table Startup_Users (
 	id int,
 	email varchar(200),
 	name varchar(200),
-	primary key(id)
+	pass varchar(200),
+	primary key(id),
+	unique(email)
 );
 
 
