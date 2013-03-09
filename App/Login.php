@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+</head>
+<body>
 <?php
     if(isset($_POST['epost']) && isset($_POST['pass'])){
 
@@ -41,4 +46,7 @@
 <?php
     }
 ?>
+
+</body>
+</html>
 

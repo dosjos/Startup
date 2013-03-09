@@ -35,11 +35,12 @@
       <script type="text/javascript">
 
           function test(name, pass){
+              alert(name);
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){
                   if(ajaxRequest.readyState == 4){
-                      var ajaxDisplay = document.getElementById('ajaxDiv');
+
                       alert(ajaxRequest.responseText);
                   }
               }
