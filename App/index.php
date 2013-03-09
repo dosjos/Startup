@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -30,7 +32,7 @@
     <script src="js/less.js" type="text/javascript"></script>
 
       <script type="text/javascript">
-          function test(name, pass){
+          function login(name, pass){
               //alert(name);
               //alert(pass);
               var ajaxRequest = new XMLHttpRequest();
@@ -52,6 +54,31 @@
 
           }
 
+
+          function registeruser(name, pass, email){
+             // alert(name);
+             // alert(pass);
+             // alert(email);
+              var ajaxRequest = new XMLHttpRequest();
+
+              ajaxRequest.onreadystatechange = function(){
+
+                  if(ajaxRequest.readyState == 4){
+                     alert(ajaxRequest.responseText);
+                      eval("var response = ("+ajaxRequest.responseText+")");
+
+                      if(response.item1 == true){
+                          window.location = "index.php#home";
+                      }
+                  }
+              }
+
+              var queryString = "RegisterUser.php?name=" + name + "&pass=" + pass + "&email="+email;
+              ajaxRequest.open("GET", queryString, true);
+              ajaxRequest.send(null);
+
+          }
+
       </script>
 
 
@@ -66,6 +93,20 @@
 
     <div data-role="content" class="content">
         <ul class="list">
+            <?php session_start();
+            if($_SESSION["inne"] == true){
+                //Her legger vi til de menyvalgene som kun skal vises dersom man er logget inn
+                echo "
+                    <li>
+                    <a href='LogOut.php' data-transition='slide'>Logout
+                    </a>
+                    <span class='chevron'></span>
+                </li>";
+            }else{
+                //Her legger vi de menyvalgene som kun skal være tilgjengelig når man er logget ut
+            }
+               //De menyvalgene som skal være tilgjengelige hele tiden legges utenfor her
+            ?>
             <li>
                 <a href="#login" data-transition="slide">Login
                 </a>
@@ -94,6 +135,7 @@
 <?php include('Home.php'); ?>
 <?php include('Register.php'); ?>
 <div data-role="page" id="login">
+
     <header data-role="header" class="bar-title">
         <h1 class="title">Login</h1>
     </header>
@@ -110,7 +152,7 @@
                     <input type="password" placeholder="passord" name="pass">
                 </div>
             </div>
-            <div class="button-block" onclick="test(input.username.value, input.pass.value)" data-ignore="push">Registrer deg!</div>
+            <div class="button-block" onclick="login(input.username.value, input.pass.value)" data-ignore="push">Registrer deg!</div>
 
         </form>
 
