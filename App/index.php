@@ -76,7 +76,7 @@
                 <span class="chevron"></span>
             </li>
             <li>
-                <a href="HowTo.php" data-transition="slide">Howto</a>
+                <a href="#howto" data-transition="slide">Howto</a>
                 <span class="chevron"></span>
             </li>
             <li>
@@ -113,6 +113,7 @@
     </div>
 </div>
 <?php include('Task.php'); ?>
+<?php include('HowTo.php'); ?>
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 <div data-role="page" id="home">
 
     <header data-role="header" class="bar-title">
+        <a data-rel="back">Back</a>
         <h1 class="title">Utvikle dine egenskaper!</h1>
     </header>
 
