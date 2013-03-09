@@ -16,8 +16,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="touch-icons/apple-touch-icon-57x57.png">
 
-    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
-    <script src="js/less.js" type="text/javascript"></script>
 
       <script src="js/popovers.js" type="text/javascript"></script>
       <script src="js/push.js" type="text/javascript"></script>
@@ -28,6 +26,8 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
 
+    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
+    <script src="js/less.js" type="text/javascript"></script>
 
       <script type="text/javascript">
           function test(name, pass){

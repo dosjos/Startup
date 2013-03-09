@@ -17,7 +17,7 @@
                   <input type="email" placeholder="din@epost.no">
                 </div>
             </div>
-            <a data-role="button">Registrer deg!</a>
+            <a data-role="button" class="button-positive">Registrer deg!</a>
         </form>
         <ul class="footer-navigation">
             <li><a href="HowTo.php">Lær mer</a></li>

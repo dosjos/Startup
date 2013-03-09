@@ -15,6 +15,7 @@
 @light-gray: #ccc;
 @medium-gray: #777;
 
+
 body {
 }
 
@@ -66,3 +67,67 @@ body {
 		}
 	}
 }
+
+
+
+
+/* JQuery overrides */
+
+.ui-corner-all,
+.ui-btn-corner-all {
+	.border-radius(5px,5px,5px,5px) !important;
+}
+
+
+/* Button modifiers
+-------------------------------------------------- */
+
+/* Overriding styles for buttons with modifiers  */
+.button-main,
+.button-positive,
+.button-negative {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
+
+/* Main button */
+.button-main {
+  background-color: #1eafe7;
+  background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
+  background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
+  border: 1px solid #117aaa;
+}
+
+/* Positive button  */
+.button-positive {
+  background-color: #34ba15;
+  background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
+  background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
+  border: 1px solid #278f0f;
+}
+
+/* Negative button  */
+.button-negative {
+  background-color: #e71e1e;
+  background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
+  background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
+  border: 1px solid #b51a1a;
+}
+
+/* Active state for buttons with modifiers */
+.button-main:active,
+.button-positive:active,
+.button-negative:active {
+  color: #fff;
+}
+.button-main:active {
+  background-color: #0876b1;
+}
+.button-positive:active {
+  background-color: #298f11;
+}
+.button-negative:active {
+  background-color: #b21a1a;
+}
+
+/* end jquery overrides */
