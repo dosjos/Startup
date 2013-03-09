@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-<?php
-    if(isset($_POST['epost']) && isset($_POST['pass'])){
-
-
-        ?>
-        <header class="bar-title">
-        <h1 class="title">Logget inn</h1>
-    </header>
-    <?php
-    }else{
-    ?>
-
-
-
-    <header class="bar-title">
+<div data-role="page" id="login">
+    <header data-role="header" class="bar-title">
         <h1 class="title">Login</h1>
     </header>
 
-    <div class="content">
+    <div data-role="content" class="content">
         <form  name="input" action="" method="get">
             <div class="input-group">
                 <div class="input-row">
@@ -38,15 +19,5 @@
 
         </form>
 
-
-
-
     </div>
-
-<?php
-    }
-?>
-
-</body>
-</html>
-
+</div>
