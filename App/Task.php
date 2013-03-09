@@ -1,72 +1,86 @@
 <div data-role="page" id="task" data-theme="d">
 
     <header data-role="header" class="bar-title">
-        <a data-rel="back">Back</a>
+        <a data-rel="back">Tilbake</a>
         <h1 class="title">Kreativitet</h1>
     </header>
 
     <div data-role="content" class="content task">
+        <div class="cover-image">
+            <img src="images/temp/task-header.jpg" />
+        </div>
         <div class="lead">
-            <p>Hvordan styrker du din kreativitet? Dette er et engasjerende avsnitt som får deg til å ville starte første del av oppgaven.</p>
+            <h2>Hvordan styrker du din kreativitet?</h2>
+            <p>Dette er et engasjerende avsnitt som får deg til å ville starte første del av oppgaven. Det er viktig at denne teksten er både <strong>inspirerende</strong> og <strong>relevant!</strong></p>
             <div class="proceed">
                 <i class="icon-circle-arrow-down"></i>
                 <p>Klar til å begynne?</p>
             </div>
         </div>
 
-        <h2>1. Sett mål!</h2>
+        <h2>Sett dine mål!</h2>
         <form>
             <div class="input-group">
                 <div class="input-row">
-                    <label>Når jeg...</label>
+                    <label>Når jeg</label>
                     <input type="text" placeholder="har spist middag">
                 </div>
                 <div class="input-row">
-                  <label>..skal jeg..</label>
+                  <label>skal jeg</label>
                   <input type="email" placeholder="male et bilde">
                 </div>
             </div>
             <div class="input-group">
                 <div class="input-row">
                     <label>Når jeg...</label>
-                    <input type="text" placeholder="har spist middag">
+                    <input type="text" placeholder="">
                 </div>
                 <div class="input-row">
                   <label>..skal jeg..</label>
-                  <input type="email" placeholder="male et bilde">
+                  <input type="email" placeholder="">
                 </div>
             </div>
             <div class="input-group">
                 <div class="input-row">
                     <label>Når jeg...</label>
-                    <input type="text" placeholder="har spist middag">
+                    <input type="text" placeholder="">
                 </div>
                 <div class="input-row">
                   <label>..skal jeg..</label>
-                  <input type="email" placeholder="male et bilde">
+                  <input type="email" placeholder="">
                 </div>
             </div>
-            <a data-role="button">Ok, gå videre!</a>
+            <a data-role="button" class="button-main">Lagre mål!</a>
         </form>
-        <h2>2. Visste du at...</h2>
-        <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
+        <h2>Ta det første steget!</h2>
+        
+        <p>Om tre dager vil vi sende deg en påminnelse på epost. Denne vil ta deg tilbake til denne siden, hvor du kan markere at du har møtt dine målsetninger.</p>
 
-        <a data-role="button">Ok, gå videre!</a>
+        <div class="progress">
 
-        <h2>3. Ta det første steget!</h2>
-        <form>
-            <div class="input-group">
-                <div class="input-row">
-                    <input type="checkbox" id="goal1"><label for="goal1">Male huset</label>
+            <h2>Huk av alle målene du har klart!</h2>
+
+            <form>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+                        <label for="checkbox-2">Male huset</label>
+                    </fieldset>
                 </div>
-                <div class="input-row">
-                    <label>Male noe</label>
-                    <div class="toggle">
-                      <div class="toggle-handle"></div>
-                    </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+                        <label for="checkbox-2">Male huset</label>
+                    </fieldset>
                 </div>
-            </div>
-            <a data-role="button">Fullfør!</a>
-        </form>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+                        <label for="checkbox-2">Male huset</label>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>

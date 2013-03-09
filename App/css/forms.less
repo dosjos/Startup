@@ -1,3 +1,33 @@
 form {
 	margin:15px 0 20px 0;
+	.input-group {
+	    background: #fff;
+		border:1px solid #ccc;
+		border-radius:5px;
+		margin-bottom:15px;
+		.input-row {
+			height:40px;
+			padding:5px 3%;
+			border-bottom: 1px solid #ddd;
+			&:last-of-type {
+				border-bottom: none;
+			}
+			label {
+			    font-weight: bold;
+			    margin-top:10px;
+				width:35%;
+				float:left;
+
+			}
+			.ui-input-text {
+				border:none;
+			}
+			input {
+				width:65%;
+				float:right;
+				border:none;
+				margin-top:-5px;
+			}
+		}
+	}
 }
