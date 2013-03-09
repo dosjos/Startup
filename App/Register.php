@@ -1,10 +1,10 @@
-<div data-role="page" id="register">
+<div data-role="page" id="register" data-theme="d">
 
     <div data-role="content" class="content register">
         <div class="welcome">
             <h1>Bli ditt beste!</h1>
             <p>Denne tjenesten hjelper deg til å utvikle de egenskapene du ønsker å forbedre.</p>
-            <p>Nyskjerrig? <a href="HowTo.php">Lær mer</a></p>
+            <p>Nyskjerrig? <a href="#howto">Lær mer</a></p>
         </div>
         <form>
             <div class="input-group">
@@ -17,7 +17,7 @@
                   <input type="email" placeholder="din@epost.no">
                 </div>
             </div>
-            <a class="button-block button-positive">Registrer deg!</a>
+            <a data-role="button">Registrer deg!</a>
         </form>
         <ul class="footer-navigation">
             <li><a href="HowTo.php">Lær mer</a></li>

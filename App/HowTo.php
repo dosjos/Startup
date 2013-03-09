@@ -1,4 +1,5 @@
-<div class="data-role" id="howto">
+<div data-role="page" id="howto" data-theme="d">
+
     <header data-role="header" class="bar-title">
         <a data-rel="back">Back</a>
         <h1 class="title">Slik fungerer det</h1>
