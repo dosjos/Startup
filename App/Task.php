@@ -89,12 +89,20 @@
                 <i class="icon-trophy"></i>
                 <p>Når du har gjennomført dette, får du <strong>konsertbiletter</strong>!</p>
             </div>
+            <div class="hint">
+               <h3>Hva nå?</h3>
+               <p>Om tre dager vil vi sende deg en påminnelse på epost. Denne vil ta deg tilbake til denne siden, hvor du kan markere de målsetningene du har klart så langt.</p>
+            </div>
         </div>
 
 
         <h2>Ta det første steget!</h2>
-        
-        <p>Om tre dager vil vi sende deg en påminnelse på epost. Denne vil ta deg tilbake til denne siden, hvor du kan markere at du har møtt dine målsetninger.</p>
+
+        <p>Tradisjonelt forbinder de fleste ordet kreativitet med ideer. Idéskaping er en viktig del av kreativitet. Men moderne kreativitet og moderne kreative metoder og teknikker handler om langt mer enn å få fler og bedre ideer.</p>
+
+        <p>Moderne kreativitet handlere også om å klargjøre hvilken situasjon vi er i og hvilke mål vi har.</p>
+
+        <p>Vi har også kreative teknikker for å finne problemer (ufordringer/muligheter) og til å analysere og vurdere disse.</p>
 
     </div>
 </div>
