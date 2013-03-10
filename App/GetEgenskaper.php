@@ -42,7 +42,7 @@ if(isset($_GET['type'])){
     //?type=getman&id=4
     if($_GET['type'] == "getman"){
         $id = $_GET["id"];
-        $query = "SELECT * FROM Startup_UsersEgenskaper";
+        $query = "SELECT * FROM Startup_UsersEgenskaper where userid = '$id'";
 
         $result = $mysqli->query($query);
         $row = $result->fetch_array(MYSQLI_NUM);

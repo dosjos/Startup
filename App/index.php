@@ -67,6 +67,7 @@
                           localStorage.clear();
                           localStorage.setItem("logedin","true");
                           localStorage.setItem("id",response.itemid);
+                      
                           window.location = "index.php#home";
                       }
                   }
@@ -82,19 +83,45 @@
 		
 		$(document).ready(function() {
 		
+			var propertylist = new Array();
 			
 			/* GetEgenskaper.php */
 			function getEgenskaper() {
+			
+
+				propertylist[0] = "";
+				propertylist[1] = 	"Kreativitet";
+				propertylist[2] = 	"Humoristisk sans";
+				propertylist[3] = 	"Være ekte";
+				propertylist[4] = 	"Nysgjerrighet";
+				propertylist[5] = 	"Like å lære";
+				propertylist[6] = 	"Modig";
+				propertylist[7] = 	"Håp";
+				propertylist[8] = 	"Kjærlighet";
+				propertylist[9] = 	"Entusiasme";
+				propertylist[10] = 	"Utholdenhet";
+				propertylist[11] = 	"Være snill";
+				propertylist[12] = 	"Rettferdighet";
+				propertylist[13] = 	"Jordnærhet";
+				propertylist[14] = 	"Viljestyrke";
+				propertylist[15] = 	"Sosial intelligens";
+				propertylist[16] = 	"Estetisk sans";
+				propertylist[17] = 	"Takknemlighet";
+				propertylist[18] = 	"Tilgivelse";
 		
+				/* populate list of props to choose from */
+/*
 				$.getJSON("GetEgenskaper.php?type=egenskaper", function(json) {
-		/* 			var items = []; */
-					$.each(json, function(key,val) {
-		/* 				items.push(val.id+','+ val.text); */				
-						$("#select ul").append('<li><a href="#">'+val.text+'</a></li>');
+					$.each(json, function(key,val)' {
+						$("#select ul").append('<li><a onclick="choseProp('+val.text+')">'+val.text+'</a></li>');
 					});
 				});		
+*/
 		
 			}
+		
+		
+			getEgenskaper();
 		
 			/* GetEgenskaper.php */
 			function getMan() {
@@ -107,11 +134,15 @@
 				        console.log("getman state : " + val.state);
 				        
 						if( val.id != 0) {
-					        $("ul.properties li:nth(" + it + ") a"  ).css("color", "green");
+					        
+					        $("ul.properties li:nth(" + it + ")"  ).addClass("selected");
+					        $("ul.properties li:nth(" + it + ") a"  ).text(propertylist[val.id]);
+					        
 					        $(".humansprite div:nth(" + it + ")" ).css({
 					        	"-webkit-filter": "hue-rotate(30deg)",
 					        	"display": "block"
 					        });
+
 					        $(".humansprite div:nth(" + it + ")" ).css("-webkit-filter", "hue-rotate(60deg)");					        
 						}
 
@@ -134,24 +165,31 @@
 				console.log("set selectingprop" + localStorage.getItem("selectingProperty"));
 			});
 		
-			/* choosing a property for limb */
-			$("#select li").on('tap', function() {
 		
-				console.log("ASDASDASD");
+			/* choosing a property for limb */
+			$("#select ul li").on('tap', function() {
+		
+				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").text($(this).text());
+				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("href", "#task");
+				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
+
+				
+				
 				/* var nthLimb = localStorage.getItem("selectingProperty") + 1; */	/* nth = index+1 */
 		/* 			var nthLimb = localStorage.getItem("selectingProperty"); */	/* nth = index+1 */
 		/* 			console.log("nth" + nthLimb); */
 		/* 			$(".properties li:nth-child(" + nthLimb + ") a" ).text( $(this + " a").html() ); */
 			});
-			
-
-
-			getEgenskaper();			
+						
 			getMan();
 			
 			
 			
-						
+			/* HOME PAGE*/
+			$(".close").on("tap",function() { 
+				$(".intro").fadeOut("fast");
+			});
+			
 			/* TASK PAGE */
 			$('.goals').show();
 			$('.progress').hide();
