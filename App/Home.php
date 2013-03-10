@@ -30,9 +30,9 @@
 
 		
 		<div data-role="popup" id="select">
-		        <ul data-role="listview">
-		            <li data-role="divider" data-theme="e">Velg en egenskap:</li>
-		            <li><a href="#">Delete</a></li>
+		        <ul data-role="listview" data-inset="true" class="ui-icon-alt" data-theme="e" >
+		            <li class="listdesc" data-role="divider">Velg en egenskap:</li>
+
 		        </ul>
 		</div>
 
