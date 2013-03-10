@@ -26,7 +26,7 @@
 
         </form>
         <ul class="footer-navigation">
-            <li><a href="HowTo.php">Lær mer</a></li>
+            <li><a href="#howto">Lær mer</a></li>
             <li><a href="#">Betingelser</a></li>
         </ul>
     </div>

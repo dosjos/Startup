@@ -28,8 +28,7 @@ if($row[0]){
     $item1 = false;
 }
 
-session_start();
-$_SESSION["inne"] = true;
+
 echo "{";
 echo "item1: ", json_encode($item1), ",\n";
 echo "itemid: ", json_encode($row[0]), ",\n";

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
-
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ratchet template page</title>
+    <title>Vær ditt beste</title>
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -123,20 +121,7 @@ id
 
     <div data-role="content" class="content">
         <ul class="list">
-            <?php session_start();
-            if($_SESSION["inne"] == true){
-                //Her legger vi til de menyvalgene som kun skal vises dersom man er logget inn
-                echo "
-                    <li>
-                    <a href='LogOut.php' data-transition='slide'>Logout
-                    </a>
-                    <span class='chevron'></span>
-                </li>";
-            }else{
-                //Her legger vi de menyvalgene som kun skal være tilgjengelig når man er logget ut
-            }
-               //De menyvalgene som skal være tilgjengelige hele tiden legges utenfor her
-            ?>
+          <!-- Logout-->
             <li>
                 <a href="#login" data-transition="slide">Login
                 </a>
@@ -158,6 +143,8 @@ id
                 <a href="#task" data-transition="slide">Task</a>
                 <span class="chevron"></span>
             </li>
+
+
         </ul>
     </div>
 </div>
