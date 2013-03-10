@@ -1,8 +1,8 @@
 <div data-role="page" id="home">
 
     <header data-role="header" class="bar-title">
-        <a data-rel="back">Back</a>
-        <h1 class="title">Utvikle dine egenskaper!</h1>
+        <div class="logo">Changetech</div>
+        <p>Vær ditt beste!</p>
     </header>
 
     <div data-role="content" class="content home">
