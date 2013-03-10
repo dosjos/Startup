@@ -67,9 +67,7 @@
                           localStorage.clear();
                           localStorage.setItem("logedin","true");
                           localStorage.setItem("id",response.itemid);
-                          
 
-                      
                           window.location = "index.php#home";
                       }
                   }
@@ -84,7 +82,7 @@
 		
 		
 		$(document).ready(function() {
-		
+		    var limb = 0;
 			var propertylist = new Array();
 			
 			/* GetEgenskaper.php */
@@ -163,6 +161,7 @@
 			/* click on nth limb of human for property-selecting */
 			$(".properties li").on('tap', function() {
 				localStorage.setItem("selectingProperty", $(this).index());
+                limb = $(this).index();
 				console.log("set selectingprop" + localStorage.getItem("selectingProperty"));
 			});
 		
@@ -174,9 +173,17 @@
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("href", "#task");
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
 
+
+               
+                $.getJSON("GetEgenskaper.php?type=setman&id=" + localStorage.getItem("id") + "&egen=" + (limb+1) + "&val=" + $(this).index(), function(json) {
+
+                });
+                if($(this).index() == 1){
+                    localStorage.setItem("limb", (limb+1));
+                }
 		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
 		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
-				
+
 			});
 						
 			getMan();
