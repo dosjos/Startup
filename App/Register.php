@@ -8,10 +8,7 @@
         </div>
         <form name="reg">
             <div class="input-group">
-                <div class="input-row">
-                    <label>Fornavn</label>
-                    <input type="text" placeholder="Ditt fornavn" name="name" required>
-                </div>
+
                 <div class="input-row">
                   <label>Epost</label>
                   <input type="email" placeholder="din@epost.no" name="email" required>
@@ -22,7 +19,7 @@
                     <input type="password" placeholder="passord" name="pass">
                 </div>
             </div>
-            <a data-role="button" class="button-positive" onclick="registeruser(reg.name.value, reg.pass.value, reg.email.value)">Registrer deg!</a>
+            <a data-role="button" class="button-positive" onclick="registeruser(reg.pass.value, reg.email.value)">Registrer deg!</a>
 
         </form>
         <ul class="footer-navigation">

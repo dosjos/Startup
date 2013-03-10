@@ -9,9 +9,8 @@
 
 $item1 = false;
 
-if(isset($_GET["name"]) && isset($_GET["email"]) && isset($_GET['pass'])){
+if(isset($_GET["email"]) && isset($_GET['pass'])){
 
-    $name = $_GET["name"];
     $email = $_GET["email"];
     $pass = $_GET['pass'];
 
@@ -25,7 +24,7 @@ if(isset($_GET["name"]) && isset($_GET["email"]) && isset($_GET['pass'])){
         exit();
     }
 
-    $query = "insert into Startup_Users (name, email, pass)  values ('$name', '$email', '$pass')";
+    $query = "insert into Startup_Users (email, pass)  values ('$email', '$pass')";
     $mysqli->query($query);
 
 //Hent id
@@ -39,7 +38,6 @@ if(isset($_GET["name"]) && isset($_GET["email"]) && isset($_GET['pass'])){
 }
 
 echo "{";
-echo "item1: ", json_encode($item1), "\n";
-echo "itemid: ", json_encode($row[0]), ",\n";
-echo "itemname: ", json_encode($row[1]), "\n";
+echo "item1: ", json_encode($item1), ",\n";
+echo "itemid: ", json_encode($row[0]), "\n";
 echo "}";

@@ -39,9 +39,9 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+                          localStorage.clear();
                           localStorage.setItem("logedin","true");
                           localStorage.setItem("id",response.itemid);
-                          localStorage.setItem("name",response.itemname);
 
                           window.location = "index.php#home";
                       }
@@ -55,7 +55,7 @@
           }
 
 
-          function registeruser(name, pass, email){
+          function registeruser( pass, email){
              // alert(name);
              // alert(pass);
              // alert(email);
@@ -68,16 +68,16 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
-                          window.location = "index.php#home";
+
+                          localStorage.clear();
                           localStorage.setItem("logedin","true");
                           localStorage.setItem("id",response.itemid);
-                          localStorage.setItem("name",response.itemname);
                           window.location = "index.php#home";
                       }
                   }
               }
 
-              var queryString = "RegisterUser.php?name=" + name + "&pass=" + pass + "&email="+email;
+              var queryString = "RegisterUser.php?pass=" + pass + "&email="+email;
               ajaxRequest.open("GET", queryString, true);
               ajaxRequest.send(null);
 
