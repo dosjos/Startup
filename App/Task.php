@@ -29,7 +29,7 @@
                         <label>Når jeg..</label>
                         <input type="text" placeholder="vil se på TV">
                     </div>
-                    <div class="input-row">
+                    <div class="input-row goal">
                       <label>..skal jeg</label>
                       <input type="text" placeholder="heller male et bilde">
                     </div>
@@ -39,7 +39,7 @@
                         <label>Når jeg..</label>
                         <input type="text" placeholder="lager middag">
                     </div>
-                    <div class="input-row">
+                    <div class="input-row goal">
                       <label>..skal jeg</label>
                       <input type="text" placeholder="prøve en ny oppskrift">
                     </div>
@@ -49,7 +49,7 @@
                         <label>Når jeg..</label>
                         <input type="text" placeholder="">
                     </div>
-                    <div class="input-row">
+                    <div class="input-row goal">
                       <label>..skal jeg</label>
                       <input type="text" placeholder="">
                     </div>
@@ -68,23 +68,23 @@
         <div class="progress">
             <h2>Huk av alle målene du har klart!</h2>
 
-            <form>
+            <form id="goaldone">
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
-                        <label for="checkbox-2">Male et portrett</label>
+                        <label for="checkbox-2" class="goal1">Ommøblere et rom</label>
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
-                        <label for="checkbox-2">Skrive et dikt</label>
+                        <label for="checkbox-2" class="goal2">Prøve en ny oppskrift</label>
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
-                        <label for="checkbox-2">Lage en app for Changetech</label>
+                        <label for="checkbox-2" class="goal3">Gå en ny rute</label>
                     </fieldset>
                 </div>
             </form>

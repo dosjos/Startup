@@ -179,7 +179,7 @@
 
                 });
                 if($(this).index() == 1){
-                    localStorage.setItem("limb", (limb+1));
+                    localStorage.setItem("limb", (limb));
                 }
 		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
 		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
@@ -218,11 +218,56 @@
 			});
 			
 			$('#saveGoalsButton').click(function() {
+				
+/*
+				var it = 1;
+				$(".goals .goal input").each( function() {
+						$(".ui-controlgroup-controls label.goal" + it).text( $(this).val() );
+						it++;
+				});
+*/
+				
 			   scrollToElement('.goals', 500, -15);
 			   $('.goals').slideUp();
 			   $('.progress').slideDown();
                $('.help').show();
 			});
+			
+			
+			function doneGoal() {
+
+				if ( localStorage.getItem("limb") != 0 ) {	
+					console.log("kumb :)");
+					$(".humansprite div:nth(" + localStorage.getItem("limb") + ")").addClass("completed");
+			        $("ul.properties li:nth(" + localStorage.getItem("limb") + ")"  ).addClass("completed");
+					
+				} else {
+					console.log("not kumb");
+				}
+	
+	
+				
+			}
+			
+
+		
+			
+			
+			$('#goaldone input').click(function() {
+				if( $(".ui-checkbox-on").length == 2) {
+                    doneGoal();	
+                    $.mobile.changePage("index.php#home");
+                    
+					
+				}
+			});
+			
+
+
+			
+			
+			
+			
 		});
 
       </script>
