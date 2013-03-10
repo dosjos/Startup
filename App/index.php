@@ -23,7 +23,6 @@
       <script src="js/push.js" type="text/javascript"></script>
       <script src="js/sliders.js" type="text/javascript"></script>
 
-
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
@@ -42,6 +41,9 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+                          localStorage.setItem("logedin","true");
+                          localStorage.setItem("id",response.itemid);
+                          localStorage.setItem("name",response.itemname);
 
                           window.location = "index.php#home";
                       }
@@ -68,6 +70,10 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+                          window.location = "index.php#home";
+                          localStorage.setItem("logedin","true");
+                          localStorage.setItem("id",response.itemid);
+                          localStorage.setItem("name",response.itemname);
                           window.location = "index.php#home";
                       }
                   }
@@ -99,6 +105,7 @@ id
 		   
 		 });
 
+}
 });
 
 
@@ -175,7 +182,7 @@ id
                     <input type="password" placeholder="passord" name="pass">
                 </div>
             </div>
-            <div class="button-block" onclick="login(input.username.value, input.pass.value)" data-ignore="push">Registrer deg!</div>
+            <a data-role="button" class="button-positive" onclick="login(input.username.value, input.pass.value)">Logg inn!</a>
 
         </form>
 
