@@ -22,3 +22,11 @@ $('#saveGoalsButton').click(function() {
    $('.goals').slideUp();
    $('.progress').slideDown();
 });
+
+
+
+/* Hører til home */
+
+$('.close').click(function () {
+    $('.intro').hide();
+});

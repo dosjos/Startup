@@ -59,7 +59,7 @@
               ajaxRequest.onreadystatechange = function(){
 
                   if(ajaxRequest.readyState == 4){
-                     alert(ajaxRequest.responseText);
+                     //alert(ajaxRequest.responseText);
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){

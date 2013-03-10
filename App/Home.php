@@ -1,8 +1,8 @@
 <div data-role="page" id="home">
 
     <header data-role="header" class="bar-title">
-        <a data-rel="back">Back</a>
-        <h1 class="title">Utvikle dine egenskaper!</h1>
+        <div class="logo">Changetech</div>
+        <p>Vær ditt beste!</p>
     </header>
 
     <div data-role="content" class="content home">
@@ -35,10 +35,10 @@
 		        </ul>
 		</div>
 
-        <div class="intro" style="display:none;">
-            <h2>Slik begynner du!</h2>
+        <div class="intro">
+            <div class="title">Slik begynner du!</div>
             <p>Fyll figuren med seks egenskaper du ønsker å forbedre.</p>
-            <a class="button-block button-main">Begynn!</a>
+            <a data-role="button" class="button-positive close">Begynn!</a>
         </div>
     </div>
 
