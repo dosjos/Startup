@@ -102,7 +102,6 @@ if(isset($_GET['type'])){
 
 
     if($_GET['type'] == "updateman"){
-        echo"her";
         $id = $_GET["id"];
         $e1 = $_GET["s1"];
         $e2 = $_GET["s2"];
@@ -115,8 +114,8 @@ if(isset($_GET['type'])){
             $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
             stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'");
 
-        echo "UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
-            stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'";
+     //   echo "UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
+      //      stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'";
 
     }
 }
