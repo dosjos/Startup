@@ -174,6 +174,8 @@
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("href", "#task");
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
 
+		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
+		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
 				
 			});
 						
