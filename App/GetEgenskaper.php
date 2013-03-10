@@ -49,12 +49,12 @@ if(isset($_GET['type'])){
 
         echo "{";
         echo '"id": '. $row[0] .",\n";
-        echo '"1": '. $row[2] .",\n";
-        echo '"2": '. $row[3] .",\n";
-        echo '"3": '. $row[4] .",\n";
-        echo '"4": '. $row[5] .",\n";
-        echo '"5": '. $row[6] .",\n";
-        echo '"6": '. $row[7] ."\n";
+        echo '"limb1": '. $row[2] .",\n";
+        echo '"limb2": '. $row[3] .",\n";
+        echo '"limb3": '. $row[4] .",\n";
+        echo '"limb4": '. $row[5] .",\n";
+        echo '"limb5": '. $row[6] .",\n";
+        echo '"limb6": '. $row[7] ."\n";
         echo "}";
     }
 
