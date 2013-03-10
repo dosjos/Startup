@@ -78,70 +78,66 @@
 
           }
 
-
-$(document).ready(function() {
-	
-	/* GetEgenskaper.php */
-	function getEgenskaper() {
-
-<<<<<<< HEAD
-		$.getJSON("GetEgenskaper.php?type=egenskaper", function(json) {
-/* 			var items = []; */
-			$.each(json, function(key,val) {
-/* 				items.push(val.id+','+ val.text); */				
-				$("#select ul").append('<li><a href="#">'+val.text+'</a></li>');
-			});
-		});		
-
-	}
-
-	/* GetEgenskaper.php */
-	function getMan() {
-
-		$.getJSON("GetEgenskaper.php?type=getman&id=" + localStorage.getItem("id"), function(json) {
+		
+		
+		$(document).ready(function() {
 			
-		    $.each($.parseJSON(json), function(key, val) {
-		        console.log("getman id : " + val.id);
-		        console.log("getman state : " + val.state);
-
-		        $("ul.properties li").each(function() {
-			        $(this).css("-webkit-filter", "hue-rotate(60deg");
-
-		        });
-		    });
-    		
-		});		
-
-	}
-
-
-	getEgenskaper();
-	
-	
-	/* click on nth limb of human for property-selecting */
-	$(".properties li").on('tap', function() {
-		localStorage.setItem("selectingProperty", $(this).index());
-		console.log("set selectingprop" + localStorage.getItem("selectingProperty"));
-	});
-
-	/* choosing a property for limb */
-	$("#select li").on('tap', function() {
-
-		console.log("ASDASDASD");
-		/* var nthLimb = localStorage.getItem("selectingProperty") + 1; */	/* nth = index+1 */
-/* 			var nthLimb = localStorage.getItem("selectingProperty"); */	/* nth = index+1 */
-/* 			console.log("nth" + nthLimb); */
-/* 			$(".properties li:nth-child(" + nthLimb + ") a" ).text( $(this + " a").html() ); */
-	});
-	
-	
-	
-	
-=======
-}
->>>>>>> 6e05c8a87e83bba0d344e886b6526472c97456f4
-});
-
+			/* GetEgenskaper.php */
+			function getEgenskaper() {
+		
+				$.getJSON("GetEgenskaper.php?type=egenskaper", function(json) {
+		/* 			var items = []; */
+					$.each(json, function(key,val) {
+		/* 				items.push(val.id+','+ val.text); */				
+						$("#select ul").append('<li><a href="#">'+val.text+'</a></li>');
+					});
+				});		
+		
+			}
+		
+			/* GetEgenskaper.php */
+			function getMan() {
+		
+				$.getJSON("GetEgenskaper.php?type=getman&id=" + localStorage.getItem("id"), function(json) {
+					
+				    $.each($.parseJSON(json), function(key, val) {
+				        console.log("getman id : " + val.id);
+				        console.log("getman state : " + val.state);
+		
+				        $("ul.properties li").each(function() {
+					        $(this).css("-webkit-filter", "hue-rotate(60deg");
+		
+				        });
+				    });
+		    		
+				});		
+		
+			}
+		
+		
+			getEgenskaper();
+			
+			
+			/* click on nth limb of human for property-selecting */
+			$(".properties li").on('tap', function() {
+				localStorage.setItem("selectingProperty", $(this).index());
+				console.log("set selectingprop" + localStorage.getItem("selectingProperty"));
+			});
+		
+			/* choosing a property for limb */
+			$("#select li").on('tap', function() {
+		
+				console.log("ASDASDASD");
+				/* var nthLimb = localStorage.getItem("selectingProperty") + 1; */	/* nth = index+1 */
+		/* 			var nthLimb = localStorage.getItem("selectingProperty"); */	/* nth = index+1 */
+		/* 			console.log("nth" + nthLimb); */
+		/* 			$(".properties li:nth-child(" + nthLimb + ") a" ).text( $(this + " a").html() ); */
+			});
+			
+			
+			
+			
+		});
 
       </script>
 
