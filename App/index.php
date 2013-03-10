@@ -233,16 +233,36 @@
                $('.help').show();
 			});
 			
+			
+			function doneGoal() {
+
+				if ( localStorage.getItem("limb") != 0 ) {	
+					console.log("kumb :)");
+					$(".humansprite div:nth(" + localStorage.getItem("limb") + ")").addClass("completed");
+			        $("ul.properties li:nth(" + localStorage.getItem("limb") + ")"  ).addClass("completed");
+					
+				} else {
+					console.log("not kumb");
+				}
+	
+	
+				
+			}
+			
+
+		
+			
+			
 			$('#goaldone input').click(function() {
 				if( $(".ui-checkbox-on").length == 2) {
+                    doneGoal();	
                     $.mobile.changePage("index.php#home");
                     
-					localStorage.setItem("doneman", "true");
+					
 				}
 			});
 			
-			
-			
+
 
 			
 			

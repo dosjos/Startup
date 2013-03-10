@@ -61,24 +61,3 @@
     </div>
 
 </div>
-
-<script type="text/javascript">
-			function doneGoal() {
-
-				if ( localStorage.getItem("limb") != 0 ) {	
-					console.log("kumb :)");
-					$(".humansprite div:nth(" + localStorage.getItem("limb") + ")").addClass("completed");
-			        $("ul.properties li:nth(" + localStorage.getItem("limb") + ")"  ).addClass("completed");
-					
-				} else {
-					console.log("not kumb");
-				}
-	
-	
-				
-			}
-			
-
-	doneGoal();
-	
-</script>
