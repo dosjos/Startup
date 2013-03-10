@@ -100,12 +100,23 @@ if(isset($_GET['type'])){
         }
     }
 
-    //$result = mysql_query("SELECT id FROM stats WHERE zone=$zone AND date=$today LIMIT 1");
-    //if(mysql_num_rows($result)) {
-    //    $id = mysql_result($result,0);
-    //    mysql_query("UPDATE stats SET hits=hits+1 WHERE id=$id");
-    //} else {
-    //    mysql_query("INSERT INTO stats (zone, date, hits) VALUES ($zone, $today, 1)");
-    //}
 
+    if($_GET['type'] == "updateman"){
+        echo"her";
+        $id = $_GET["id"];
+        $e1 = $_GET["s1"];
+        $e2 = $_GET["s2"];
+        $e3 = $_GET["s3"];
+        $e4 = $_GET["s4"];
+        $e5 = $_GET["s5"];
+        $e6 = $_GET["s6"];
+
+
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
+            stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'");
+
+        echo "UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
+            stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'";
+
+    }
 }
