@@ -173,10 +173,15 @@
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("href", "#task");
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
 
+
                
                 $.getJSON("GetEgenskaper.php?type=setman&id=" + localStorage.getItem("id") + "&egen=" + (limb+1) + "&val=" + $(this).index(), function(json) {
 
                 });
+
+		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
+		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
+
 			});
 						
 			getMan();
@@ -189,8 +194,9 @@
 			});
 			
 			/* TASK PAGE */
-			$('.goals').show();
+			$('.goals').hide();
 			$('.progress').hide();
+            $('.help').hide();
 			
 			function scrollToElement(selector, time, verticalOffset) {
 			    time = typeof(time) != 'undefined' ? time : 1000;
@@ -205,6 +211,7 @@
 			
 			$('.proceed').click(function () {
 			    $(this).hide();
+                $('.goals').show();
 			    scrollToElement('.goals', 500, -15);
 			});
 			
@@ -212,6 +219,7 @@
 			   scrollToElement('.goals', 500, -15);
 			   $('.goals').slideUp();
 			   $('.progress').slideDown();
+               $('.help').show();
 			});
 		});
 

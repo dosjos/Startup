@@ -92,18 +92,25 @@
                 <i class="icon-trophy"></i>
                 <p>Når du har gjennomført dette, får du <strong>konsertbiletter</strong>!</p>
             </div>
+        </div>
+        <div class="help">
+
+            <h2>Ta det første steget!</h2>
+
+            <p>Du er allerede kreativ. Antagelig langt mer enn det du er klar over.</p>
+            <p>Og kreativitet, som det meste annet, kan læres.</p>
+            <p>Fokuser på dine målsetninger, og ta et steg av gangen. Når du finner noe du liker, gjør det oftere.</p>
+
             <div class="hint">
                <h3>Hva nå?</h3>
                <p>Om tre dager vil vi sende deg en påminnelse på epost. Denne vil ta deg tilbake til denne siden, hvor du kan markere de målsetningene du har klart så langt.</p>
+
+                <a data-role="button" class="button-main" href="#home">Tilbake til start</a>
             </div>
+
+
         </div>
 
-
-        <h2>Ta det første steget!</h2>
-
-        <p>Du er allerede kreativ. Antagelig langt mer enn det du er klar over.</p>
-        <p>Og kreativitet, som det meste annet, kan læres.</p>
-        <p>Fokuser på dine målsetninger, og ta et steg av gangen. Når du finner noe du liker, gjør det oftere.</p>
-
     </div>
+
 </div>
