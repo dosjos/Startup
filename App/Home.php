@@ -35,10 +35,10 @@
 		        </ul>
 		</div>
 
-        <div class="intro" style="display:none;">
-            <h2>Slik begynner du!</h2>
+        <div class="intro">
+            <div class="title">Slik begynner du!</div>
             <p>Fyll figuren med seks egenskaper du ønsker å forbedre.</p>
-            <a class="button-block button-main">Begynn!</a>
+            <a data-role="button" class="button-positive close">Begynn!</a>
         </div>
     </div>
 
