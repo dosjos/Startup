@@ -178,7 +178,9 @@
                 $.getJSON("GetEgenskaper.php?type=setman&id=" + localStorage.getItem("id") + "&egen=" + (limb+1) + "&val=" + $(this).index(), function(json) {
 
                 });
-
+                if($(this).index() == 1){
+                    localStorage.setItem("limb", (limb+1));
+                }
 		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
 		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
 
