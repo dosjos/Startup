@@ -23,7 +23,7 @@
 
         </form>
         <ul class="footer-navigation">
-            <li><a href="#howto">Lær mer</a></li>
+            <li><a href="#login">Logg inn!</a></li>
             <li><a href="#">Betingelser</a></li>
         </ul>
     </div>

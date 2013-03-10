@@ -120,16 +120,18 @@ body {
 .button-main:active,
 .button-positive:active,
 .button-negative:active {
-  color: #fff;
+  color: #fff !important;
 }
 .button-main:active {
-  background-color: #0876b1;
+  background-color: #0876b1 !important;
 }
 .button-positive:active {
-  background-color: #298f11;
+  background-color: #298f11 !important;
+  background-image: -webkit-linear-gradient(top, #34ba15 0, #298f11 100%);
+  background-image: linear-gradient(to bottom, #34ba15 0, #298f11 100%);
 }
 .button-negative:active {
-  background-color: #b21a1a;
+  background-color: #b21a1a !important;
 }
 
 /* end jquery overrides */

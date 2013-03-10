@@ -254,6 +254,7 @@
         <ul class="footer-navigation">
             <li><a href="#howto">Lær mer</a></li>
             <li><a href="#">Betingelser</a></li>
+            <li><a href="#register">Registrer deg</a></li>
         </ul>
     </div>
 </div>
