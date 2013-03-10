@@ -38,8 +38,26 @@
 		margin-bottom:15px;
 		padding-bottom:6px;
 	}
+	.goals {
+		.reward {
+		    margin:20px 0;
+		    padding-left:80px;
+			position:relative;
+			font-size:0.8em;
+			i {
+				font-size:50px;
+				left:10px;
+				position: absolute;
+				color:@brand-blue;
+			}
+		}
+		#saveGoalsButton {
+			margin:25px 0 40px 0;
+		}
+	}
 	.progress {
 	    border-top:1px solid @brand-blue-light;
+	    border-bottom:1px solid @brand-blue-light;
 		background: lighten(@brand-blue-light, 15%);
 		margin:20px -15px 0 -15px;
 		padding:1px 15px 15px 15px;
@@ -49,6 +67,16 @@
 			width:80%;
 			text-align: center;
 			margin:20px auto 0 auto;
+		}
+		.reward {
+		    padding-left:80px;
+			position:relative;
+			i {
+				font-size:50px;
+				left:10px;
+				position: absolute;
+				color:@brand-blue;
+			}
 		}
 	}
 }
