@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
-
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ratchet template page</title>
+    <title>Vær ditt beste</title>
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,7 +21,6 @@
       <script src="js/push.js" type="text/javascript"></script>
       <script src="js/sliders.js" type="text/javascript"></script>
 
-
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
@@ -33,8 +30,6 @@
 
       <script type="text/javascript">
           function login(name, pass){
-              //alert(name);
-              //alert(pass);
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){
@@ -42,6 +37,9 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+                          localStorage.clear();
+                          localStorage.setItem("logedin","true");
+                          localStorage.setItem("id",response.itemid);
 
                           window.location = "index.php#home";
                       }
@@ -55,10 +53,7 @@
           }
 
 
-          function registeruser(name, pass, email){
-             // alert(name);
-             // alert(pass);
-             // alert(email);
+          function registeruser( pass, email){
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){
@@ -68,12 +63,16 @@
                       eval("var response = ("+ajaxRequest.responseText+")");
 
                       if(response.item1 == true){
+
+                          localStorage.clear();
+                          localStorage.setItem("logedin","true");
+                          localStorage.setItem("id",response.itemid);
                           window.location = "index.php#home";
                       }
                   }
               }
 
-              var queryString = "RegisterUser.php?name=" + name + "&pass=" + pass + "&email="+email;
+              var queryString = "RegisterUser.php?pass=" + pass + "&email="+email;
               ajaxRequest.open("GET", queryString, true);
               ajaxRequest.send(null);
 
@@ -85,6 +84,7 @@ $(document).ready(function() {
 	/* GetEgenskaper.php */
 	function getEgenskaper() {
 
+<<<<<<< HEAD
 		$.getJSON("GetEgenskaper.php?type=egenskaper", function(json) {
 /* 			var items = []; */
 			$.each(json, function(key,val) {
@@ -137,6 +137,9 @@ $(document).ready(function() {
 	
 	
 	
+=======
+}
+>>>>>>> 6e05c8a87e83bba0d344e886b6526472c97456f4
 });
 
 
@@ -152,22 +155,9 @@ $(document).ready(function() {
         <h1 class="title">Push</h1>
     </header>
 
-    <div data-role="content" class="content">
+    <div data-role="content" class="content register">
         <ul class="list">
-            <?php session_start();
-            if($_SESSION["inne"] == true){
-                //Her legger vi til de menyvalgene som kun skal vises dersom man er logget inn
-                echo "
-                    <li>
-                    <a href='LogOut.php' data-transition='slide'>Logout
-                    </a>
-                    <span class='chevron'></span>
-                </li>";
-            }else{
-                //Her legger vi de menyvalgene som kun skal være tilgjengelig når man er logget ut
-            }
-               //De menyvalgene som skal være tilgjengelige hele tiden legges utenfor her
-            ?>
+          <!-- Logout-->
             <li>
                 <a href="#login" data-transition="slide">Login
                 </a>
@@ -189,6 +179,8 @@ $(document).ready(function() {
                 <a href="#task" data-transition="slide">Task</a>
                 <span class="chevron"></span>
             </li>
+
+
         </ul>
     </div>
 </div>
@@ -201,7 +193,12 @@ $(document).ready(function() {
         <h1 class="title">Login</h1>
     </header>
 
-    <div data-role="content" class="content">
+    <div data-role="content" class="content register">
+        <div class="welcome">
+            <h1>Bli ditt beste!</h1>
+            <p>Denne tjenesten hjelper deg til å utvikle de egenskapene du ønsker å forbedre.</p>
+            <p>Logg inn nå for å bli det beste du kan være</p>
+        </div>
         <form  name="input" action="" method="get">
             <div class="input-group">
                 <div class="input-row">
@@ -213,10 +210,13 @@ $(document).ready(function() {
                     <input type="password" placeholder="passord" name="pass">
                 </div>
             </div>
-            <div class="button-block" onclick="login(input.username.value, input.pass.value)" data-ignore="push">Registrer deg!</div>
+            <a data-role="button" class="button-positive" onclick="login(input.username.value, input.pass.value)">Logg inn!</a>
 
         </form>
-
+        <ul class="footer-navigation">
+            <li><a href="#howto">Lær mer</a></li>
+            <li><a href="#">Betingelser</a></li>
+        </ul>
     </div>
 </div>
 <?php include('Task.php'); ?>

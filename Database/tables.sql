@@ -30,6 +30,14 @@ create table Startup_UsersEgenskaper(
 	egenskapSix int,
 	egenskapSeven int,
 	
+	stateOne int not null,
+	stateTwo int not null,
+	stateThree int not null,
+	stateFour int not null,
+	stateFive int not null,
+	stateSix int not null,
+	stateSeven int not null,
+	
 	FOREIGN KEY (userid) REFERENCES Startup_Users(id),
 	primary key(id)
 );
