@@ -240,7 +240,9 @@
 					console.log("kumb :)");
 					$(".humansprite div:nth(" + localStorage.getItem("limb") + ")").addClass("completed");
 			        $("ul.properties li:nth(" + localStorage.getItem("limb") + ")"  ).addClass("completed");
-					
+                    $.getJSON("GetEgenskaper.php?type=updateman&id=" + localStorage.getItem("id") + "&egen=" + (limb+1) + "&val=" + $(this).index(), function(json) {
+
+                    });
 				} else {
 					console.log("not kumb");
 				}
