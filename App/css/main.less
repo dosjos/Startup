@@ -53,14 +53,16 @@ body {
 	}
 
 	.footer-navigation {
-	    padding-top:20px;
+	    padding:20px 0 20px 0;
+	    margin:0;
 		list-style: none;
 		text-align: center;
 		text-shadow:none;
 		li {
 			display: inline-block;
-			padding:5px 15px;
-			border-right:1px solid #ccc;
+			padding:5px 25px;
+			border-right:1px solid darken(@brand-blue,30%);
+			a { color: @brand-blue !important; text-decoration: none; }
 			&:last-of-type {
 				border-right: 0;
 			}
