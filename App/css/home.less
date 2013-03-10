@@ -80,10 +80,6 @@
 				&.selected {
 					display: block;
 				}
-				&.completed {
-					display: block;
-				}
-
 				&.head {
 					width: (120px)/2;
 					height: (115px)/2;
@@ -137,6 +133,12 @@
 
 					-webkit-filter: ~"saturate(110%)";
 				}
+				&.completed {
+					display: block;
+					-webkit-filter: ~"saturate(200%)" !important;
+					-webkit-filter: ~"hue-rotate(270deg)" !important;
+				}
+
 			}
 			
 		}
