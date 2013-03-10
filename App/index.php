@@ -67,6 +67,9 @@
                           localStorage.clear();
                           localStorage.setItem("logedin","true");
                           localStorage.setItem("id",response.itemid);
+                          alert(response.itemid);
+                          alert(localStorage.getItem("id"));
+
                           window.location = "index.php#home";
                       }
                   }
