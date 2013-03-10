@@ -135,15 +135,14 @@
 				        
 						if( val.id != 0) {
 					        
-					        $("ul.properties li:nth(" + it + ")"  ).addClass("selected");
+					        $("ul.properties li:nth(" + it + ")"  ).addClass((val.state == 0 ? "selected" : "completed"));
 					        $("ul.properties li:nth(" + it + ") a"  ).text(propertylist[val.id]);
 					        
-					        $(".humansprite div:nth(" + it + ")" ).css({
-					        	"-webkit-filter": "hue-rotate(30deg)",
-					        	"display": "block"
-					        });
+					        $(".humansprite div:nth(" + it + ")" ).addClass((val.state == 0 ? "selected" : "completed"));
 
-					        $(".humansprite div:nth(" + it + ")" ).css("-webkit-filter", "hue-rotate(60deg)");					        
+
+					        $("ul.properties li:nth(" + it + ") a" ).attr("href", "#task");
+					        $("ul.properties li:nth(" + it + ") a").attr("data-rel", "");
 						}
 
 				        
@@ -174,11 +173,6 @@
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
 
 				
-				
-				/* var nthLimb = localStorage.getItem("selectingProperty") + 1; */	/* nth = index+1 */
-		/* 			var nthLimb = localStorage.getItem("selectingProperty"); */	/* nth = index+1 */
-		/* 			console.log("nth" + nthLimb); */
-		/* 			$(".properties li:nth-child(" + nthLimb + ") a" ).text( $(this + " a").html() ); */
 			});
 						
 			getMan();
