@@ -187,8 +187,9 @@
 			});
 			
 			/* TASK PAGE */
-			$('.goals').show();
+			$('.goals').hide();
 			$('.progress').hide();
+            $('.help').hide();
 			
 			function scrollToElement(selector, time, verticalOffset) {
 			    time = typeof(time) != 'undefined' ? time : 1000;
@@ -203,6 +204,7 @@
 			
 			$('.proceed').click(function () {
 			    $(this).hide();
+                $('.goals').show();
 			    scrollToElement('.goals', 500, -15);
 			});
 			
@@ -210,6 +212,7 @@
 			   scrollToElement('.goals', 500, -15);
 			   $('.goals').slideUp();
 			   $('.progress').slideDown();
+               $('.help').show();
 			});
 		});
 
