@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$query = "SELECT * FROM startup_users where email = '$name' and pass = '$pass'";
+$query = "SELECT * FROM Startup_Users where email = '$name' and pass = '$pass'";
 $result = $mysqli->query($query);
 
 /* numeric array */
@@ -28,8 +28,9 @@ if($row[0]){
     $item1 = false;
 }
 
-session_start();
-$_SESSION["inne"] = true;
+
 echo "{";
-echo "item1: ", json_encode($item1), "\n";
+echo "item1: ", json_encode($item1), ",\n";
+echo "itemid: ", json_encode($row[0]), ",\n";
+echo "itemname: ", json_encode($row[1]), "\n";
 echo "}";
