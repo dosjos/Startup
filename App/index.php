@@ -30,8 +30,6 @@
 
       <script type="text/javascript">
           function login(name, pass){
-              //alert(name);
-              //alert(pass);
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){
@@ -56,9 +54,6 @@
 
 
           function registeruser( pass, email){
-             // alert(name);
-             // alert(pass);
-             // alert(email);
               var ajaxRequest = new XMLHttpRequest();
 
               ajaxRequest.onreadystatechange = function(){

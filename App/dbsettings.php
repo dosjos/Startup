@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$dbhost = 'localhost';//ec2-23-21-3-21.compute-1.amazonaws.com';
+$dbhost = 'ec2-23-21-3-21.compute-1.amazonaws.com';
 $dbuser = 'janole';
 $dbpass = 'passord';
 $dbname = 'startup';
