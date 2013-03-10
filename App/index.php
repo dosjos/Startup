@@ -211,11 +211,36 @@
 			});
 			
 			$('#saveGoalsButton').click(function() {
+				
+/*
+				var it = 1;
+				$(".goals .goal input").each( function() {
+						$(".ui-controlgroup-controls label.goal" + it).text( $(this).val() );
+						it++;
+				});
+*/
+				
 			   scrollToElement('.goals', 500, -15);
 			   $('.goals').slideUp();
 			   $('.progress').slideDown();
                $('.help').show();
 			});
+			
+			$('#goaldone input').click(function() {
+				if( $(".ui-checkbox-on").length == 2) {
+                    $.mobile.changePage("index.php#home");
+                    
+					localStorage.setItem("doneman", "true");
+				}
+			});
+
+			
+			
+
+			
+			
+			
+			
 		});
 
       </script>
