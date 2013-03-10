@@ -4,7 +4,7 @@
         <div class="welcome">
             <h1>Bli ditt beste!</h1>
             <p>Denne tjenesten hjelper deg til å utvikle de egenskapene du ønsker å forbedre.</p>
-            <p>Nyskjerrig? <a href="#howto">Lær mer</a></p>
+            <p>Nyskgjerrig? <a href="#howto">Lær mer</a></p>
         </div>
         <form name="reg">
             <div class="input-group">
