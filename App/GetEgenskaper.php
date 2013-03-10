@@ -48,7 +48,6 @@ if(isset($_GET['type'])){
         $row = $result->fetch_array(MYSQLI_NUM);
 
         echo "{";
-        echo '"id": '. $row[0] .",\n";
         echo '"limb1": '. $row[2] .",\n";
         echo '"limb2": '. $row[3] .",\n";
         echo '"limb3": '. $row[4] .",\n";
@@ -68,12 +67,17 @@ if(isset($_GET['type'])){
         $e5 = $_GET["e5"];
         $e6 = $_GET["e6"];
 
-        $result = mysql_query("SELECT * FROM Startup_UsersEgenskaper WHERE userid=$id");
-        if(mysql_num_rows($result)) {
-            mysql_query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$e1' and egenskapTwo='$e2' and
-            egenskapThree='$e3' and egenskapFour='$e4' and egenskapFive='$e5' and egenskapSix='$e6' and  WHERE userid=$id");
+        $result2 = $mysqli->query("SELECT * FROM Startup_UsersEgenskaper WHERE userid='$id'");
+        $result = $mysqli->query("SELECT * FROM Startup_UsersEgenskaper WHERE userid='$id'");
+        $rekker = 0;
+        while ($row = $result2->fetch_array(MYSQLI_NUM)) {
+            $rekker++;
+        }
+        if($rekker != 0) {
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$e1', egenskapTwo='$e2',
+            egenskapThree='$e3', egenskapFour='$e4', egenskapFive='$e5', egenskapSix='$e6' WHERE userid='$id'");
         }else{
-            mysql_query("INSERT INTO Startup_UsersEgenskaper (userid, egenskapOne,egenskapTwo,egenskapThree,egenskapFour,egenskapFive,egenskapSix)
+            $mysqli->query("INSERT INTO Startup_UsersEgenskaper (userid, egenskapOne,egenskapTwo,egenskapThree,egenskapFour,egenskapFive,egenskapSix)
             VALUES ('$id','$e1','$e2','$e3','$e4','$e5','$e6' )");
         }
     }
