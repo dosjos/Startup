@@ -82,7 +82,7 @@
 		
 		
 		$(document).ready(function() {
-		
+		    var limb = 0;
 			var propertylist = new Array();
 			
 			/* GetEgenskaper.php */
@@ -161,6 +161,7 @@
 			/* click on nth limb of human for property-selecting */
 			$(".properties li").on('tap', function() {
 				localStorage.setItem("selectingProperty", $(this).index());
+                limb = $(this).index();
 				console.log("set selectingprop" + localStorage.getItem("selectingProperty"));
 			});
 		
@@ -172,7 +173,10 @@
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("href", "#task");
 				$(".properties li:nth(" + localStorage.getItem("selectingProperty") + ") a").attr("data-rel", "");
 
-				
+               
+                $.getJSON("GetEgenskaper.php?type=setman&id=" + localStorage.getItem("id") + "&egen=" + (limb+1) + "&val=" + $(this).index(), function(json) {
+
+                });
 			});
 						
 			getMan();

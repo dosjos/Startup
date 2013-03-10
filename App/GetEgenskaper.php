@@ -84,6 +84,9 @@ if(isset($_GET['type'])){
         $e4 = $_GET["e4"];
         $e5 = $_GET["e5"];
         $e6 = $_GET["e6"];
+        $egenskap = $_GET["egen"];
+        $val = $_GET["val"];
+
 
         $result2 = $mysqli->query("SELECT * FROM Startup_UsersEgenskaper WHERE userid='$id'");
         $result = $mysqli->query("SELECT * FROM Startup_UsersEgenskaper WHERE userid='$id'");
@@ -92,8 +95,24 @@ if(isset($_GET['type'])){
             $rekker++;
         }
         if($rekker != 0) {
-            $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$e1', egenskapTwo='$e2',
-            egenskapThree='$e3', egenskapFour='$e4', egenskapFive='$e5', egenskapSix='$e6' WHERE userid='$id'");
+            if($egenskap == "alle"){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$e1', egenskapTwo='$e2',
+              egenskapThree='$e3', egenskapFour='$e4', egenskapFive='$e5', egenskapSix='$e6' WHERE userid='$id'");
+            }else if($egenskap == 1){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$val' WHERE userid='$id'");
+            }else if($egenskap == 2){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET  egenskapTwo='$val',
+               WHERE userid='$id'");
+            }else if($egenskap == 3){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapThree='$val' WHERE userid='$id'");
+            }else if($egenskap == 4){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET egenskapFour='$val' WHERE userid='$id'");
+            }else if($egenskap == 5){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET  egenskapFive='$val' WHERE userid='$id'");
+            }else if($egenskap == 6){
+                $mysqli->query("UPDATE Startup_UsersEgenskaper SET  egenskapSix='$val' WHERE userid='$id'");
+            }
+
         }else{
             $mysqli->query("INSERT INTO Startup_UsersEgenskaper (userid, egenskapOne,egenskapTwo,egenskapThree,egenskapFour,egenskapFive,egenskapSix)
             VALUES ('$id','$e1','$e2','$e3','$e4','$e5','$e6' )");
