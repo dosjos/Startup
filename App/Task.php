@@ -11,7 +11,10 @@
         </div>
         <div class="lead">
             <h2>Hvordan styrker du din kreativitet?</h2>
-            <p>Dette er et engasjerende avsnitt som får deg til å ville starte første del av oppgaven. Det er viktig at denne teksten er både <strong>inspirerende</strong> og <strong>relevant!</strong></p>
+
+            <p>Ordet kreativitet forbindes ofte med store kunstnere eller musikere, men kreativitet er veldig mye mer.</p>
+            <p>Å ommøblere et rom, lage en ny matrett eller prøve noe nytt er også eksempler på kreativitet.</p>
+            <p>I denne oppgaven vil du sette dine egne mål, og få tips underveis til hvordan du kan nå disse.</p>
             <div class="proceed">
                 <i class="icon-circle-arrow-down"></i>
                 <p>Er du klar til å begynne?</p>
@@ -24,21 +27,21 @@
                 <div class="input-group">
                     <div class="input-row">
                         <label>Når jeg..</label>
-                        <input type="text" placeholder="har spist middag">
+                        <input type="text" placeholder="vil se på TV">
                     </div>
                     <div class="input-row">
                       <label>..skal jeg</label>
-                      <input type="text" placeholder="male et bilde">
+                      <input type="text" placeholder="heller male et bilde">
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-row">
                         <label>Når jeg..</label>
-                        <input type="text" placeholder="">
+                        <input type="text" placeholder="lager middag">
                     </div>
                     <div class="input-row">
                       <label>..skal jeg</label>
-                      <input type="text" placeholder="">
+                      <input type="text" placeholder="prøve en ny oppskrift">
                     </div>
                 </div>
                 <div class="input-group">
@@ -98,11 +101,9 @@
 
         <h2>Ta det første steget!</h2>
 
-        <p>Tradisjonelt forbinder de fleste ordet kreativitet med ideer. Idéskaping er en viktig del av kreativitet. Men moderne kreativitet og moderne kreative metoder og teknikker handler om langt mer enn å få fler og bedre ideer.</p>
-
-        <p>Moderne kreativitet handlere også om å klargjøre hvilken situasjon vi er i og hvilke mål vi har.</p>
-
-        <p>Vi har også kreative teknikker for å finne problemer (ufordringer/muligheter) og til å analysere og vurdere disse.</p>
+        <p>Du er allerede kreativ. Antagelig langt mer enn det du er klar over.</p>
+        <p>Og kreativitet, som det meste annet, kan læres.</p>
+        <p>Fokuser på dine målsetninger, og ta et steg av gangen. Når du finner noe du liker, gjør det oftere.</p>
 
     </div>
 </div>
