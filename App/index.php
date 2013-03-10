@@ -114,7 +114,7 @@ id
         <h1 class="title">Push</h1>
     </header>
 
-    <div data-role="content" class="content">
+    <div data-role="content" class="content register">
         <ul class="list">
           <!-- Logout-->
             <li>
@@ -152,7 +152,12 @@ id
         <h1 class="title">Login</h1>
     </header>
 
-    <div data-role="content" class="content">
+    <div data-role="content" class="content register">
+        <div class="welcome">
+            <h1>Bli ditt beste!</h1>
+            <p>Denne tjenesten hjelper deg til å utvikle de egenskapene du ønsker å forbedre.</p>
+            <p>Logg inn nå for å bli det beste du kan være</p>
+        </div>
         <form  name="input" action="" method="get">
             <div class="input-group">
                 <div class="input-row">
@@ -167,7 +172,10 @@ id
             <a data-role="button" class="button-positive" onclick="login(input.username.value, input.pass.value)">Logg inn!</a>
 
         </form>
-
+        <ul class="footer-navigation">
+            <li><a href="#howto">Lær mer</a></li>
+            <li><a href="#">Betingelser</a></li>
+        </ul>
     </div>
 </div>
 <?php include('Task.php'); ?>
