@@ -22,7 +22,7 @@
                 <li class="head"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
                 <li class="left-arm"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
                 <li class="right-arm"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
-                <li class="torso completed"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
+                <li class="torso"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
                 <li class="left-leg"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
                 <li class="right-leg"><a href="#select" data-rel="popup" data-position-to="window">Velg</a></li>
             </ul>
@@ -61,3 +61,24 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+			function doneGoal() {
+
+				if ( localStorage.getItem("limb") != 0 ) {	
+					console.log("kumb :)");
+					$(".humansprite div:nth(" + localStorage.getItem("limb") + ")").addClass("completed");
+			        $("ul.properties li:nth(" + localStorage.getItem("limb") + ")"  ).addClass("completed");
+					
+				} else {
+					console.log("not kumb");
+				}
+	
+	
+				
+			}
+			
+
+	doneGoal();
+	
+</script>

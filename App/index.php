@@ -179,7 +179,7 @@
 
                 });
                 if($(this).index() == 1){
-                    localStorage.setItem("limb", (limb+1));
+                    localStorage.setItem("limb", (limb));
                 }
 		        $("ul.properties li:nth(" + localStorage.getItem("selectingProperty") + ")"  ).addClass("selected");				
 		        $(".humansprite div:nth(" + localStorage.getItem("selectingProperty") + ")" ).addClass("selected");				
@@ -240,7 +240,7 @@
 					localStorage.setItem("doneman", "true");
 				}
 			});
-
+			
 			
 			
 
