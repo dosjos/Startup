@@ -49,17 +49,34 @@ if(isset($_GET['type'])){
 
         echo "{";
         echo '"id": '. $row[0] .",\n";
-        echo '"id": '. $row[2] .",\n";
-        echo '"id": '. $row[3] .",\n";
-        echo '"id": '. $row[4] .",\n";
-        echo '"id": '. $row[5] .",\n";
-        echo '"id": '. $row[6] .",\n";
-        echo '"id": '. $row[7] .",\n";
-        echo '"id": '. $row[8] .",\n";
+        echo '"1": '. $row[2] .",\n";
+        echo '"2": '. $row[3] .",\n";
+        echo '"3": '. $row[4] .",\n";
+        echo '"4": '. $row[5] .",\n";
+        echo '"5": '. $row[6] .",\n";
+        echo '"6": '. $row[7] ."\n";
         echo "}";
     }
 
 
+    if($_GET['type'] == "setman"){
+        $id = $_GET["id"];
+        $e1 = $_GET["e1"];
+        $e2 = $_GET["e2"];
+        $e3 = $_GET["e3"];
+        $e4 = $_GET["e4"];
+        $e5 = $_GET["e5"];
+        $e6 = $_GET["e6"];
+
+        $result = mysql_query("SELECT * FROM Startup_UsersEgenskaper WHERE userid=$id");
+        if(mysql_num_rows($result)) {
+            mysql_query("UPDATE Startup_UsersEgenskaper SET egenskapOne='$e1' and egenskapTwo='$e2' and
+            egenskapThree='$e3' and egenskapFour='$e4' and egenskapFive='$e5' and egenskapSix='$e6' and  WHERE userid=$id");
+        }else{
+            mysql_query("INSERT INTO Startup_UsersEgenskaper (userid, egenskapOne,egenskapTwo,egenskapThree,egenskapFour,egenskapFive,egenskapSix)
+            VALUES ('$id','$e1','$e2','$e3','$e4','$e5','$e6' )");
+        }
+    }
 
     //$result = mysql_query("SELECT id FROM stats WHERE zone=$zone AND date=$today LIMIT 1");
     //if(mysql_num_rows($result)) {
