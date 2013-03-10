@@ -48,12 +48,30 @@ if(isset($_GET['type'])){
         $row = $result->fetch_array(MYSQLI_NUM);
 
         echo "{";
-        echo '"limb1": '. $row[2] .",\n";
-        echo '"limb2": '. $row[3] .",\n";
-        echo '"limb3": '. $row[4] .",\n";
-        echo '"limb4": '. $row[5] .",\n";
-        echo '"limb5": '. $row[6] .",\n";
-        echo '"limb6": '. $row[7] ."\n";
+        echo '"limb1" :{ ';
+        echo '"id":'. $row[2] .",\n";
+        echo '"state":'. $row[9] ."\n";
+        echo '},';
+        echo '"limb2" :{ ';
+        echo '"id":'. $row[3] .",\n";
+        echo '"state":'. $row[10] ."\n";
+        echo '},';
+        echo '"limb3" :{ ';
+        echo '"id":'. $row[4] .",\n";
+        echo '"state":'. $row[11] ."\n";
+        echo '},';
+        echo '"limb4" :{ ';
+        echo '"id":'. $row[5] .",\n";
+        echo '"state":'. $row[12] ."\n";
+        echo '},';
+        echo '"limb5" :{ ';
+        echo '"id":'. $row[6] .",\n";
+        echo '"state":'. $row[13] ."\n";
+        echo '},';
+        echo '"limb6" :{ ';
+        echo '"id":'. $row[7] .",\n";
+        echo '"state":'. $row[14] ."\n";
+        echo '}';
         echo "}";
     }
 
