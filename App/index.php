@@ -81,6 +81,7 @@
 		
 		
 		$(document).ready(function() {
+		
 			
 			/* GetEgenskaper.php */
 			function getEgenskaper() {
@@ -97,17 +98,26 @@
 		
 			/* GetEgenskaper.php */
 			function getMan() {
-		
+
 				$.getJSON("GetEgenskaper.php?type=getman&id=" + localStorage.getItem("id"), function(json) {
-					
-				    $.each($.parseJSON(json), function(key, val) {
+					console.log("getegenskaper mann");
+					var it = 0;
+				    $.each(json, function(key, val) {
 				        console.log("getman id : " + val.id);
 				        console.log("getman state : " + val.state);
-		
-				        $("ul.properties li").each(function() {
-					        $(this).css("-webkit-filter", "hue-rotate(60deg");
-		
-				        });
+				        
+						if( val.id != 0) {
+					        $("ul.properties li:nth(" + it + ") a"  ).css("color", "green");
+					        $(".humansprite div:nth(" + it + ")" ).css({
+					        	"-webkit-filter": "hue-rotate(30deg)",
+					        	"display": "block"
+					        });
+					        $(".humansprite div:nth(" + it + ")" ).css("-webkit-filter", "hue-rotate(60deg)");					        
+						}
+
+				        
+				        it++;
+					        
 				    });
 		    		
 				});		
@@ -115,7 +125,7 @@
 			}
 		
 		
-			getEgenskaper();
+
 			
 			
 			/* click on nth limb of human for property-selecting */
@@ -134,9 +144,39 @@
 		/* 			$(".properties li:nth-child(" + nthLimb + ") a" ).text( $(this + " a").html() ); */
 			});
 			
+
+
+			getEgenskaper();			
+			getMan();
 			
 			
 			
+						
+			/* TASK PAGE */
+			$('.goals').show();
+			$('.progress').hide();
+			
+			function scrollToElement(selector, time, verticalOffset) {
+			    time = typeof(time) != 'undefined' ? time : 1000;
+			    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+			    element = $(selector);
+			    offset = element.offset();
+			    offsetTop = offset.top + verticalOffset;
+			    $('html, body').animate({
+			        scrollTop: offsetTop
+			    }, time);
+			}
+			
+			$('.proceed').click(function () {
+			    $(this).hide();
+			    scrollToElement('.goals', 500, -15);
+			});
+			
+			$('#saveGoalsButton').click(function() {
+			   scrollToElement('.goals', 500, -15);
+			   $('.goals').slideUp();
+			   $('.progress').slideDown();
+			});
 		});
 
       </script>
@@ -145,44 +185,9 @@
   </head>
   <body>
 
-<div data-role="page">
-
-    <header data-role="header" class="bar-title">
-        <h1 class="title">Push</h1>
-    </header>
-
-    <div data-role="content" class="content register">
-        <ul class="list">
-          <!-- Logout-->
-            <li>
-                <a href="#login" data-transition="slide">Login
-                </a>
-                <span class="chevron"></span>
-            </li>
-            <li>
-                <a href="#register" data-transition="slide">Register</a>
-                <span class="chevron"></span>
-            </li>
-            <li>
-                <a href="#home" data-transition="slide">Home</a>
-                <span class="chevron"></span>
-            </li>
-            <li>
-                <a href="#howto" data-transition="slide">Howto</a>
-                <span class="chevron"></span>
-            </li>
-            <li>
-                <a href="#task" data-transition="slide">Task</a>
-                <span class="chevron"></span>
-            </li>
-
-
-        </ul>
-    </div>
-</div>
-
-<?php include('Home.php'); ?>
 <?php include('Register.php'); ?>
+<?php include('Home.php'); ?>
+
 <div data-role="page" id="login">
 
     <header data-role="header" class="bar-title">
