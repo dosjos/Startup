@@ -128,13 +128,27 @@ if(isset($_GET['type'])){
         $e4 = $_GET["s4"];
         $e5 = $_GET["s5"];
         $e6 = $_GET["s6"];
+        $egenskap = $_GET["egen"];
+        $val = $_GET["val"];
 
-
+        if($egenskap == "alle"){
             $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
             stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'");
+        }else if($egenskap == 1){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateOne='$val' WHERE userid='$id'");
+        }else if($egenskap == 2){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET  stateTwo='$val',
+                   WHERE userid='$id'");
+        }else if($egenskap == 3){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateThree='$val' WHERE userid='$id'");
+        }else if($egenskap == 4){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateFour='$val' WHERE userid='$id'");
+        }else if($egenskap == 5){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET  stateFive='$val' WHERE userid='$id'");
+        }else if($egenskap == 6){
+            $mysqli->query("UPDATE Startup_UsersEgenskaper SET stateSix='$val' WHERE userid='$id'");
+        }
 
-     //   echo "UPDATE Startup_UsersEgenskaper SET stateOne='$e1', stateTwo='$e2',
-      //      stateThree='$e3', stateFour='$e4', stateFive='$e5', stateSix='$e6' WHERE userid='$id'";
 
     }
 }
