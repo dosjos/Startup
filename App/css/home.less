@@ -88,35 +88,45 @@
 					width: (120px)/2;
 					height: (115px)/2;
 					top: (0px)/2;
-					left: 44px;
+					left: 46px;
+
+					-webkit-filter: ~"saturate(130%)";
 				}
 				&.left-arm {
 					width: (58px)/2;
 					height: (280px)/2;
 					top: (116px)/2;
-					left: (25px)/2;
+					left: (26px)/2;
 					background-position: 0 (-116px)/2;
+
+					-webkit-filter: ~"saturate(160%)";
 				}
 				&.right-arm {
-					width: (58px)/2;
+					width: (62px)/2;
 					height: (280px)/2;
 					top: (116px)/2;
-					left: (210px)/2;
+					left: (208px)/2;
 					background-position: 0 -202px;
+
+					-webkit-filter: ~"saturate(130%)";
 				}
 				&.torso {
-					width: (138px)/2;
-					height: (259px)/2;
+					width: (136px)/2;
+					height: (260px)/2;
 					top:(112px)/2;
 					left:(82px)/2;
 					background-position: (-364px)/2 0;
+
+					-webkit-filter: ~"saturate(180%)";
 				}
 				&.left-leg {
-					width: (101px)/2;
+					width: (100px)/2;
 					height: (313px)/2;
 					top: (370px)/2;
-					left:(52px)/2;
+					left:(50px)/2;
 					background-position: (-331px)/2 (-259px)/2;
+
+					-webkit-filter: ~"saturate(140%)";
 				}
 				&.right-leg {
 					width: (101px)/2;
@@ -124,6 +134,8 @@
 					top: (370px)/2;
 					left: (152px)/2;
 					background-position: (-709px)/2 (-259px)/2;
+
+					-webkit-filter: ~"saturate(110%)";
 				}
 			}
 			
@@ -140,12 +152,38 @@
 				font-size:14px;
 				color:@medium-gray;
 
+				a {
+					text-decoration: none;
+					color:@medium-gray;
+				}
+
 				&.selected {
-					color: black;
+					a {
+					    color: @brand-blue-dark;
+						font-weight: normal;
+						display:inline-block;
+						background: lighten(@brand-blue-light,20%);
+						padding:3px 5px;
+						border-radius:8px;
+						border:1px solid @brand-blue-light;
+					}
+
 				}
 
 				&.completed {
-					color: green;
+					a {
+						color: #fff;
+						font-weight: normal;
+						display:inline-block;
+						background-color: #34ba15;
+						background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
+						background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
+						border: 1px solid #278f0f;
+						padding:3px 5px;
+						border-radius:8px;
+						text-shadow: none;
+    					text-decoration: line-through;
+					}
 				}
 
 				&:after {
